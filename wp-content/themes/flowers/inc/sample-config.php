@@ -10,7 +10,7 @@
 
 
     // This is your option name where all the Redux data is stored.
-    $opt_name = "redux_demo";
+    $opt_name = "flowers_theme_opt";
 
     // This line is only for altering the demo. Can be easily removed.
     $opt_name = apply_filters( 'redux_demo/opt_name', $opt_name );

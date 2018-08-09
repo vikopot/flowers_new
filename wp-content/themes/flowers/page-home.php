@@ -1,4 +1,5 @@
 <?php /* Template Name: home*/ ?>
+<?var_dump($flowers_theme_opt);?>
 
 <ul class="products">
     <?php
@@ -756,7 +757,7 @@
       <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
      </article> <!-- carousel-caption .// -->
       <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
-         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
+         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Подробнее</button>
       </article>      
     </div>
     <div class="carousel-item">
@@ -807,10 +808,16 @@
       background-image: url('<?php echo get_bloginfo('template_url');?>/img/catalog_block.png');
       background-size: 100%;
        margin: 5px;
+       height: 100px;
+       align-items: center;
+       display: flex;
+       justify-content: center;
+       padding: 0px;
    }
    .sc-product-categories-home-wrap.p-color-bg.style-02{
        background: none;
    }
+
 </style>
                                  <div class="col-md-12 col-sm-12 wpb_column vc_column_container vc_col-sm-3">
                                     <div class="vc_column-inner ">
@@ -2566,7 +2573,11 @@
             color: black;
          }
       </style>
-      <a class="back-to-top" href="javascript:;"> <i class="fas fa-angle-up"></i> </a>  <!-- <script type="text/javascript">var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      <a class="back-to-top" href="javascript:;" style="
+    display:  flex;
+    justify-content: center;
+    align-items:  center;
+"> <i class="fas fa-angle-up"></i> </a>  <!-- <script type="text/javascript">var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
