@@ -1,21 +1,76 @@
 <?php /* Template Name: home*/ ?>
+
+<ul class="products">
+    <?php
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 12
+    );
+    $loop = new WP_Query( $args );
+    if ( $loop->have_posts() ) {
+        while ( $loop->have_posts() ) : $loop->the_post();
+            var_dump($product->get_id());
+            echo $product->get_name();
+            echo $product->get_price();
+            the_permalink();
+            ?> <img src="<?=get_the_post_thumbnail_url( $product->get_id(), 'thumbnail' );?>" alt=""><?
+        endwhile;
+    } else {
+        echo __( 'No products found' );
+    }
+    wp_reset_postdata();
+    ?>
+</ul><!--/.products-->
+
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
-
+       <meta http-equiv="Access-Control-Allow-Origin" content="*">
+       <meta charset='utf-8'>
       <!-- Slider -->
-                                          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <!-- slider end-->
 
       <!-- <script src="/cdn-cgi/apps/head/2oc_RD5SS6wgN5SiQnSEnWVNHg8.js"></script> -->
       <!-- <link rel="stylesheet" <a href="/handmade/wp-content/cache/min/1/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" /> -->
-      <link rel="stylesheet" href="css/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />
+       <style>
+           /*@font-face{*/
+               /*font-family:revicons;*/
+               /*src:url(http://themes.g5plus.net/handmade/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888);*/
+               /*src:url(http://themes.g5plus.net/handmade/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888#iefix) format('embedded-opentype'),*/
+               /*url(http://themes.g5plus.net/handmade/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888) format('woff'),*/
+               /*url(http://themes.g5plus.net/handmade/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.ttf?5510888) format('truetype'),*/
+               /*url(http://themes.g5plus.net/handmade/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.svg?5510888#revicons) format('svg');*/
+               /*font-weight:400;*/
+               /*font-style:normal*/
+           /*}*/
+
+           /*style.css*/
+           @font-face {
+               font-family: 'gothic';
+               src: url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.eot');
+               src: local('gothic'), url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.woff') format('woff'),
+               url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.ttf') format('truetype');
+           }
+
+           @font-face{
+               font-family:fontawesome;
+               src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?v=4.3.0);
+               src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0) format('embedded-opentype'),
+               url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff2?v=4.3.0) format('woff2'),
+               url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff?v=4.3.0) format('woff'),
+               url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.ttf?v=4.3.0) format('truetype'),
+               url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
+               font-weight:400;font-style:normal
+           }
+       </style>
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />
       <!-- <script src="http://themes.g5plus.net/handmade/wp-content/cache/min/1/1e2d507c5610e2750f2f3a3c173602ca.js" data-minify="1"></script> -->
-      <script src="js/1e2d507c5610e2750f2f3a3c173602ca.js" data-minify="1"></script>  
+      <script src="<?php echo get_bloginfo('template_url');?>/js/1e2d507c5610e2750f2f3a3c173602ca.js" data-minify="1"></script>
       <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script> 
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -28,9 +83,9 @@
       <link rel='dns-prefetch' href='//s.w.org' />
       <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Feed" href="http://themes.g5plus.net/handmade/feed/" />
       <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Comments Feed" href="http://themes.g5plus.net/handmade/comments/feed/" />
-      <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/themes.g5plus.net\/handmade\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.11"}};
-         !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-      </script> 
+<!--      <script type="text/javascript">window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/themes.g5plus.net\/handmade\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.7.11"}};-->
+<!--         !function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);-->
+<!--      </script> -->
       
 
 
@@ -108,7 +163,7 @@
       <meta name="generator" content="Powered by Slider Revolution 5.4.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
 
       <!-- <link rel="stylesheet" type="text/css" media="all" href="http://themes.g5plus.net/handmade/?custom-page=header-custom-css&amp;current_page_id=30" /> -->
-      <link rel="stylesheet" type="text/css" media="all" href="css/header-custom-css.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_url');?>/layouts/header-custom-css.css" />
 
       <style type="text/css" title="dynamic-css" class="options-output">body{background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center center}.page-title-margin{margin-top:25px;margin-bottom:55px}.archive-title-margin{margin-top:25px;margin-bottom:55px}.single-blog-title-margin{margin-top:25px;margin-bottom:55px}body{font-family:"Varela Round";font-weight:400;font-style:normal;font-size:14px}h1{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:36px}h2{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:28px}h3{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:24px}h4{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:21px}h5{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:18px}h6{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:14px}{font-family:"Varela Round"}{font-family:"Playfair Display"}.page-title-inner
          h1{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:normal;color:#333;font-size:35px}.page-title-inner .page-sub-title{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:italic;color:#333;font-size:14px}.archive-product-title-margin{margin-top:25px;margin-bottom:55px}.single-product-title-margin{margin-top:25px;margin-bottom:55px}.portfolio-title-margin{margin-top:25px;margin-bottom:55px}
@@ -129,11 +184,11 @@
 
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
       
-      <link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/Pe-icon-7-stroke.css">
       <style>
          @font-face {
       font-family:fontawesome;
-      src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0) format(embedded-opentype),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff2?v=4.3.0) format(woff2),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff?v=4.3.0) format(woff),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.ttf?v=4.3.0) format(truetype),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format(svg);
+      src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0) format(embedded-opentype),url('<?php echo get_bloginfo('template_url');?>/fonts/fontawesome-webfont.woff2?v=4.3.0') format(woff2),url(<?php echo get_bloginfo('template_url');?>/fonts/fontawesome-webfont.woff?v=4.3.0) format(woff),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.ttf?v=4.3.0) format(truetype),url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format(svg);
       font-weight:400;
       font-style:normal;
       }
@@ -146,8 +201,8 @@
 
       @font-face {
    font-family: 'gothic';
-   src: url('fonts/g/gothic.eot');
-   src: local('gothic'), url('fonts/g/gothic.woff') format('woff'), url('fonts/g/gothic.ttf') format('truetype');
+   src: url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.eot');
+   src: local('gothic'), url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.woff') format('woff'), url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.ttf') format('truetype');
 }
 
 
@@ -171,7 +226,7 @@
                            <div id="lang_sel">
                               <ul>
                                  <li>
-                                    <img src="img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5;width: 50px;">
+                                    <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5;width: 50px;">
                                     <!-- <a href="#" class="lang_sel_sel icl-en"> <img class="iclflag" src="http://themes.g5plus.net/handmade/wp-content/themes/handmade/assets/images/flags/en.png" alt="en" title="English">&nbsp;English </a> -->
                                    <!--  <ul>
                                        <li class="icl-fr"> <a href="#"> <img class="iclflag" src="http://themes.g5plus.net/handmade/wp-content/themes/handmade/assets/images/flags/fr.png" alt="fr" title="French">&nbsp;French </a></li>
@@ -201,7 +256,8 @@
                   <div class="sidebar top-bar-right col-md-8">
 
                      <aside id="text-6" class="separate-right p-color widget widget_text">
-                        <div class="textwidget" style=" display: flex; align-items: center; ">Добро пожаловать в Flowers Boutique</div>
+                        <div class="textwidget" style=" display: flex; align-items: center; ">Гармония и
+                            любовь, в каждом букете <!--Добро пожаловать в Flowers Boutique--></div>
                      </aside>
                      <aside id="nav_menu-5" class="widget widget_nav_menu">
                         <div class="menu-topbar-menu-container">
@@ -239,7 +295,7 @@
             }
          </style>
          <header id="header-mobile" class="mobile-header header-mobile-2">
-            <div class="header-mobile-before"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src="img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme"> </a></div>
+            <div class="header-mobile-before"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme"> </a></div>
             <div class="header-container-wrapper menu-drop-fly header-mobile-sticky">
                <div class="container header-mobile-wrapper">
                   <div class="header-mobile-inner">
@@ -487,7 +543,7 @@
                         </ul>
                      </div>
                   </div>
-                  <div class="header-logo"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src="img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme" /> </a></div>
+                  <div class="header-logo"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme" /> </a></div>
                   <div class="fr">
                      <div class="header-customize header-customize-right header-customize-separate">
                         <div class="custom-text-wrapper header-customize-item">
@@ -534,7 +590,7 @@
                      <div class="header-left">
                         <div id="primary-menu" class="menu-wrapper">
                            <ul id="main-menu" class="main-menu x-nav-menu x-nav-menu_main-menu x-animate-slide-up" data-breakpoint="991">
-                              <li class="logo-sticky"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src="img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme"/> </a></li>
+                              <li class="logo-sticky"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme"/> </a></li>
                               <li id="menu-item-2294" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children x-menu-item x-sub-menu-standard">
                                  <a href="#" class="x-menu-a-text"><span class="x-menu-text">Главная</span></a>
                               </li>
@@ -677,31 +733,26 @@
        box-shadow: none !important;
    }
    article.carousel-caption{
-      background-image: url('img/aside8.png');
+      background-image: url('<?php echo get_bloginfo('template_url');?>/img/aside8.png');
       background-size: 100% 100%;
       background-repeat: no-repeat;
-      /*border: 1px solid #fff;*/
    }
 </style>
-
-                                 <div class="col-md-9 col-sm-12 sm-margin-bottom-30 wpb_column vc_column_container vc_col-sm-9">
-
-
-
-                                    <div id="carousel1_indicator" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel1_indicator" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel1_indicator" data-slide-to="1"></li>
-    <li data-target="#carousel1_indicator" data-slide-to="2"></li>
-  </ol>  
+    <div class="col-md-1"></div>
+          <div class="col-md-10 col-sm-12 sm-margin-bottom-30 wpb_column vc_column_container vc_col-sm-9">
+               <div id="carousel1_indicator" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel1_indicator" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel1_indicator" data-slide-to="1"></li>
+                        <li data-target="#carousel1_indicator" data-slide-to="2"></li>
+                      </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
 
-     <img class="d-block w-100" src="img/slide.jpg" alt="Third slide">
+     <img class="d-block w-100" src="https://static.tildacdn.com/tild6139-3838-4161-b633-643461643932/11.png" alt="Third slide">
       <article class="carousel-caption d-none d-md-block">
-       <h5>Third slide label</h5>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt</p>
+       <h5>Добро пожаловать в Flowers Boutique</h5>
+       <!--<p>Добро пожаловать в Flowers Boutique</p>-->
       <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
      </article> <!-- carousel-caption .// -->
       <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
@@ -709,7 +760,7 @@
       </article>      
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/slide1.jpg" alt="Second slide">
+      <img class="d-block w-100" src="<?php echo get_bloginfo('template_url');?>/img/slide1.jpg" alt="Second slide">
       <article class="carousel-caption d-none d-md-block">
        <h5>Third slide label</h5>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -721,7 +772,7 @@
       </article> 
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/slide2.JPG" alt="Third slide">
+      <img class="d-block w-100" src="<?php echo get_bloginfo('template_url');?>/img/slide2.JPG" alt="Third slide">
       <article class="carousel-caption d-none d-md-block">
        <h5>Third slide label</h5>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -744,7 +795,7 @@
 </div> 
 
 
-                                 </div>
+                                 </div><div class="col-md-1"></div>
 <style type="text/css">
    .sc-product-categories-home-wrap li a{
       font-family: 'gothic';
@@ -752,27 +803,31 @@
    .sc-product-categories-home-wrap li:last-child{
       border-bottom: none; 
    }
-   .sc-product-categories-home-wrap.p-color-bg.style-02{
-      background-image: url('img/catalog_block.png');
+   .vc_column-inner .wpb_wrapper ul.product-categories-home.row li{
+      background-image: url('<?php echo get_bloginfo('template_url');?>/img/catalog_block.png');
       background-size: 100%;
+       margin: 5px;
+   }
+   .sc-product-categories-home-wrap.p-color-bg.style-02{
+       background: none;
    }
 </style>
-                                 <div class="col-md-3 col-sm-12 wpb_column vc_column_container vc_col-sm-3">
+                                 <div class="col-md-12 col-sm-12 wpb_column vc_column_container vc_col-sm-3">
                                     <div class="vc_column-inner ">
                                        <div class="wpb_wrapper">
                                           <div data-height="490" class="sc-product-categories-home-wrap p-color-bg style-02">
-                                             <ul class="product-categories-home">
+                                             <ul class="product-categories-home row">
                                                 
                                                 <!-- <li><a href="/handmade/product-category/love/" title="Love">Главная</a></li>
-                                                <li><a href="/handmade/product-category/jewelry/" title="Jewelry">Хит Продаж</a></li>
+                                                <li> <a href="/handmade/product-category/jewelry/" title="Jewelry">Хит Продаж</a></li>
                                                 <li><a href="/handmade/product-category/illumination/" title="Illumination">Акции и Скидки</a></li>
                                                 <li><a href="/handmade/product-category/greeting-cards/" title="Greeting Cards">Доставка</a></li> -->
-                                                <li><a href="/handmade/product-category/every-day/" title="Every Day">Все товары</a></li>
+                                                <li class="col"><a href="/handmade/product-category/every-day/" title="Every Day">Все товары</a></li>
                                                 <!-- <li><a href="/handmade/product-category/birthday-gifts/" title="Birthday Gifts">Отзывы</a></li> -->
-                                                <li><a href="/handmade/product-category/uncategorized/" title="Uncategorized">Цветы</a></li>
-                                                <li><a href="/handmade/product-category/special-goods/" title="Special Goods">Десерты</a></li>
-                                                <li><a href="/handmade/product-category/romantic/" title="Romantic">Игрушки</a></li>
-                                                <li><a href="/handmade/product-category/personal/" title="Personal">Шары</a></li>
+                                                <li class="col"><a href="/handmade/product-category/uncategorized/" title="Uncategorized">Цветы</a></li>
+                                                <li class="col"><a href="/handmade/product-category/special-goods/" title="Special Goods">Десерты</a></li>
+                                                <li class="col"><a href="/handmade/product-category/romantic/" title="Romantic">Игрушки</a></li>
+                                                <li class="col"><a href="/handmade/product-category/personal/" title="Personal">Шары</a></li>
                                              </ul>
                                              <!-- <a class="show-more"><i class="fas fa-angle-down"></i></a> -->
                                           </div>
@@ -844,7 +899,7 @@
                                                       <div class="handmade-post-image">
                                                          <div class="entry-thumbnail">
                                                             <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages" class="entry-thumbnail_overlay">
-                                                               <img src="img/gift.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"><!-- <i class="fab fa-gratipay"></i> --> 
+                                                               <img src="<?php echo get_bloginfo('template_url');?>/img/gift.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"><!-- <i class="fab fa-gratipay"></i> -->
                                                             </a>
                                                             <!-- <a data-rel="prettyPhoto" <a href="/handmade/wp-content/uploads/2015/08/news-02.jpg" class="prettyPhoto"> -->
                                                                <!-- <i class="fas fa-expand"></i> -->
@@ -872,7 +927,7 @@
                                                    </div>
                                                    <div class="handmade-post-item">
                                                       <div class="handmade-post-image">
-                                                         <div class="entry-thumbnail"> <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages" class="entry-thumbnail_overlay"> <img src="img/birthday-cake.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"><!-- <i class="fas fa-birthday-cake"></i> --> <a data-rel="prettyPhoto" <a href="/handmade/wp-content/uploads/2015/08/news-02.jpg" class="prettyPhoto"><i class="fas fa-expand"></i></a></div>
+                                                         <div class="entry-thumbnail"> <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages" class="entry-thumbnail_overlay"> <img src="<?php echo get_bloginfo('template_url');?>/img/birthday-cake.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"><!-- <i class="fas fa-birthday-cake"></i> --> <a data-rel="prettyPhoto" <a href="/handmade/wp-content/uploads/2015/08/news-02.jpg" class="prettyPhoto"><i class="fas fa-expand"></i></a></div>
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
@@ -883,7 +938,7 @@
                                                    </div>
                                                    <div class="handmade-post-item">
                                                       <div class="handmade-post-image">
-                                                         <div class="entry-thumbnail"> <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages" class="entry-thumbnail_overlay"> <img src="img/chef.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"> </a> <a data-rel="prettyPhoto" <a href="/handmade/wp-content/uploads/2015/08/news-02.jpg" class="prettyPhoto"><i class="fas fa-expand"></i></a></div>
+                                                         <div class="entry-thumbnail"> <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages" class="entry-thumbnail_overlay"> <img src="<?php echo get_bloginfo('template_url');?>/img/chef.png" alt="Опытные кондитеры" width="100" height="100" class="about_img"> </a> <a data-rel="prettyPhoto" <a href="/handmade/wp-content/uploads/2015/08/news-02.jpg" class="prettyPhoto"><i class="fas fa-expand"></i></a></div>
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
@@ -1888,7 +1943,7 @@
                                        <div class="wpb_wrapper">
                                           <div class="handmade-banner style2   right">
                                              <div class="overflow-hidden">
-                                                <div class="bg-img" style="height:269px; height:269px; background-image: url('img/tul1111p.png'); background-size:100%"></div>
+                                                <div class="bg-img" style="height:269px; height:269px; background-image: url('http://skinali.izmoroz.com/image/cache/data/catalog/skinali/skinali_35_t3_tender_rose-1210x330.jpg'); background-size:100%"></div>
                                              </div>
                                              <div class="overlay-banner">
                                                 <a class="link-banner" title="" target="_self" href="#">
@@ -2418,7 +2473,7 @@
                               <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3">
                                  <aside id="wolverine-footer-logo-2" class="widget widget-footer-logo">
                                     <div class="footer-logo">
-                                       <a href="/handmade"><img class="footer-logo-img" src="img/king.png" alt="Handmade" style="        width: 80px;"/></a>
+                                       <a href="/handmade"><img class="footer-logo-img" src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Handmade" style="        width: 80px;"/></a>
                                        <div class="sub-description"> Доставка цветов по всей Одессе. Любовь и забота о клиенте в каждом букете.</div>
                                     </div>
                                  </aside>
@@ -2610,7 +2665,7 @@ var xmenu_meta_custom = [];
 
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?libraries=places&#038;language=en_US&#038;key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&#038;ver=4.7.11'></script>
 <!-- <script src="http://themes.g5plus.net/handmade/wp-content/cache/min/1/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script> -->
- <script src="js/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script>
+ <script src="<?php echo get_bloginfo('template_url');?>/js/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script>
  <!-- нужен для бургера -->
 
    </body>
