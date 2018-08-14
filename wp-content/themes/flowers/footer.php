@@ -8,47 +8,47 @@
  *
  * @package flowers
  */
-
+ 
 ?>
 <footer class="main-footer-wrapper light">
     <div id="wrapper-footer">
         <div class="main-footer">
             <div class="footer_inner clearfix">
-                <div class="footer-top-bar-wrapper">
-                    <!-- <div class="footer-top-bar-inner">
-                       <div class="full">
-                          <div class=" sidebar">
-                             <aside id="handmade-partner-carousel-4" class="widget widget-partner-carousel">
-                                <div class="container">
-                                   <div class="partner-wrap col-md-12  owl-carousel " data-plugin-options='{ "items" : 5,"pagination": false, "navigation": false, "autoPlay": true}'>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Old"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-1.jpg" alt="Vintage Old" /> </a></div>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-2.jpg" alt="Vintage" /> </a></div>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Interior"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-3.jpg" alt="Vintage Interior" /> </a></div>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Design"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-4.jpg" alt="Vintage Design" /> </a></div>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-5.jpg" alt="Vintage" /> </a></div>
-                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-2.jpg" alt="Vintage" /> </a></div>
-                                   </div>
-                                </div>
-                             </aside>
-                             <aside id="handmade-map-scroll-up-3" class="widget widget-map-scroll-up">
-                                <div class="map-scroll-up">
-                                   <div class="link-wrap">
-                                      <div class="map col-md-6 col-sm-6 col-xs-6"> <a href="javascript:;" class="a-map p-color-hover"> <i class="pe-7s-map-marker pe-lg pe-va"></i> <span>Мы на карте</span> </a></div>
-                                      <div class="scroll-up col-md-6 col-sm-6 col-xs-6"> <a href="javascript:;" class="a-scroll-up p-color-hover"> <i class="pe-7s-up-arrow"></i> <span>Вверх страницы</span> </a></div>
-                                   </div>
-                                   <div class="handmade-map container">
-                                      <div class="row">
-                                         <div class="col-md-12">
-                                            <div class="handmade-google-map " data-location-x="40.6700" data-location-y="-73.9400" data-marker-title="Google map" style="height:450px" data-map-zoom="12" data-map-style="none"></div>
-                                         </div>
-                                      </div>
-                                   </div>
-                                </div>
-                             </aside>
-                          </div>
-                       </div>
-                    </div> -->
-                </div>
+<!--                <div class="footer-top-bar-wrapper">-->
+<!--                    <!-- <div class="footer-top-bar-inner">-->
+<!--                       <div class="full">-->
+<!--                          <div class=" sidebar">-->
+<!--                             <aside id="handmade-partner-carousel-4" class="widget widget-partner-carousel">-->
+<!--                                <div class="container">-->
+<!--                                   <div class="partner-wrap col-md-12  owl-carousel " data-plugin-options='{ "items" : 5,"pagination": false, "navigation": false, "autoPlay": true}'>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Old"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-1.jpg" alt="Vintage Old" /> </a></div>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-2.jpg" alt="Vintage" /> </a></div>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Interior"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-3.jpg" alt="Vintage Interior" /> </a></div>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage Design"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-4.jpg" alt="Vintage Design" /> </a></div>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-5.jpg" alt="Vintage" /> </a></div>-->
+<!--                                      <div class="partner content-middle-inner"> <a href="#" title="Vintage"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/partner-2.jpg" alt="Vintage" /> </a></div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                             </aside>-->
+<!--                             <aside id="handmade-map-scroll-up-3" class="widget widget-map-scroll-up">-->
+<!--                                <div class="map-scroll-up">-->
+<!--                                   <div class="link-wrap">-->
+<!--                                      <div class="map col-md-6 col-sm-6 col-xs-6"> <a href="javascript:;" class="a-map p-color-hover"> <i class="pe-7s-map-marker pe-lg pe-va"></i> <span>Мы на карте</span> </a></div>-->
+<!--                                      <div class="scroll-up col-md-6 col-sm-6 col-xs-6"> <a href="javascript:;" class="a-scroll-up p-color-hover"> <i class="pe-7s-up-arrow"></i> <span>Вверх страницы</span> </a></div>-->
+<!--                                   </div>-->
+<!--                                   <div class="handmade-map container">-->
+<!--                                      <div class="row">-->
+<!--                                         <div class="col-md-12">-->
+<!--                                            <div class="handmade-google-map " data-location-x="40.6700" data-location-y="-73.9400" data-marker-title="Google map" style="height:450px" data-map-zoom="12" data-map-style="none"></div>-->
+<!--                                         </div>-->
+<!--                                      </div>-->
+<!--                                   </div>-->
+<!--                                </div>-->
+<!--                             </aside>-->
+<!--                          </div>-->
+<!--                       </div>-->
+<!--                    </div> -->
+<!--                </div>-->
                 <div class="footer_top_holder col-12">
                     <div class="container">
                         <div class="row footer-top-col-4 footer-1">
@@ -65,12 +65,14 @@
                                     <h4 class="widget-title"><span>Страницы</span></h4>
                                     <div class="menu-footer-information-container">
                                         <ul id="menu-footer-information" class="menu">
-                                            <li id="menu-item-2430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2430"><a href="#">Главная</a></li>
-                                            <li id="menu-item-2431" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2431"><a href="#">Хиты продаж</a></li>
-                                            <li id="menu-item-2432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2432"><a href="#">Доставка</a></li>
-                                            <li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2433"><a href="#">О нас</a></li>
-                                            <li id="menu-item-2434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2434"><a href="#">Контакты</a></li>
-                                            <li id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a href="#">Отзывы</a></li>
+                                            <li id="menu-item-2430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2430"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Главная</a></li>
+
+                                            <li id="menu-item-2431" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2431"><a href="<?php echo $home_url_link; ?>#bl2" class="scrollto_link">Хиты продаж</a></li>
+                                            <li id="menu-item-2429" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2431"><a href="<?=$home_url_link; ?>#bl3" class="scrollto_link">Акции и скидки</a></li><!-- 2429 -->
+                                            <li id="menu-item-2432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2432"><a href="<?=$home_url_link; ?>#bl4" class="scrollto_link">Доставка</a></li>
+                                            <li id="menu-item-2433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2433"><a href="<?=$home_url_link; ?>#bl5" class="scrollto_link">О нас</a></li>
+                                            <li id="menu-item-2434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2434"><a href="<?=$home_url_link; ?>#bl6" class="scrollto_link">Контакты</a></li>
+                                            <li id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a href="<?=$home_url_link; ?>#bl7" class="scrollto_link">Отзывы</a></li>
                                         </ul>
                                     </div>
                                 </aside>
@@ -80,16 +82,16 @@
                                     <h4 class="widget-title"><span>Категории</span></h4>
                                     <div class="menu-footer-extras-container">
                                         <ul id="menu-footer-extras" class="menu">
-                                            <li id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a href="#">Цветы</a></li>
-                                            <li id="menu-item-2436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2436"><a href="#">Десерты</a></li>
-                                            <li id="menu-item-2437" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2437"><a href="#">Игрушки</a></li>
-                                            <li id="menu-item-2438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2438"><a href="#">Шары</a></li>
+                                            <li id="menu-item-2435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2435"><a href="http://www.kolopar.xyz/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b/">Цветы</a></li>
+                                            <li id="menu-item-2436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2436"><a href="http://www.kolopar.xyz/product-category/%d0%b4%d0%b5%d1%81%d0%b5%d1%80%d1%82%d1%8b/">Десерты</a></li>
+                                            <li id="menu-item-2437" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2437"><a href="http://www.kolopar.xyz/product-category/%d0%b8%d0%b3%d1%80%d1%83%d1%88%d0%ba%d0%b8/">Игрушки</a></li>
+                                            <li id="menu-item-2438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2438"><a href="http://www.kolopar.xyz/product-category/%d1%88%d0%b0%d1%80%d1%8b/">Шары</a></li>
                                             <!-- <li id="menu-item-2439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2439"><a href="#">Site Map</a></li> -->
                                         </ul>
                                     </div>
                                 </aside>
                             </div>
-                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3">
+                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3" id="bl6">
                                 <aside id="text-2" class="widget-title-s-font widget widget_text">
                                     <h4 class="widget-title"><span>Контакты</span></h4>
                                     <div class="textwidget">
@@ -252,7 +254,17 @@ var yith_woocompare = {"ajaxurl":"\/handmade\/?wc-ajax=%%endpoint%%","actionadd"
 <script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?libraries=places&#038;language=en_US&#038;key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&#038;ver=4.7.11'></script>
 <!-- <script src="http://themes.g5plus.net/handmade/wp-content/cache/min/1/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script> -->
 <script src="<?php echo get_bloginfo('template_url');?>/js/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script>
+
+<!-- <script src="<?php echo get_bloginfo('template_url');?>/js/owl.carousel.js"></script> -->
+
 <!-- нужен для бургера -->
+
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+    });
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

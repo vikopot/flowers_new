@@ -159,7 +159,7 @@ if ( ! function_exists( 'flowers_woocommerce_wrapper_before' ) ) {
 	 */
 	function flowers_woocommerce_wrapper_before() {
 		?>
-		<div id="primary" class="content-area">
+		<div id="primary" class="content-area container">
 			<main id="main" class="site-main" role="main">
 			<?php
 	}

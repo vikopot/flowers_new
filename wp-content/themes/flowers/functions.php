@@ -171,3 +171,119 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+function my_enqueue_stuff() {
+
+	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+    //push
+    // <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/14aa881f8080b6a5a1fa5c698ced7c61_0.js" async></script>
+    wp_enqueue_script( 'flowers-push', '//cdn.sendpulse.com/js/push/14aa881f8080b6a5a1fa5c698ced7c61_0.js');
+
+  if ( is_product() ) {
+    // wp_enqueue_style( 'flowers-single_product', 'http://themes.g5plus.net/handmade/wp-content/themes/handmade/g5plus-framework/xmenu/assets/css/style.css');
+    wp_enqueue_style( 'flowers-single_product_css', get_template_directory_uri() . '/layouts/product.css');
+      wp_enqueue_style( 'carousel-css', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
+      wp_enqueue_style( 'carousel-css_theme_default', get_template_directory_uri() . '/owlcarousel/owl.theme.default.min.css');
+      wp_enqueue_script( 'carousel_js', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js');
+  } else {
+    /** Call regular enqueue */
+  }
+
+
+  if ( is_cart() ) {
+    wp_enqueue_style( 'flowers-cart', get_template_directory_uri() . '/layouts/cart.css');
+  }
+
+
+  if ( is_checkout() ) {
+    wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/checkout.css');
+    wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
+  }
+}
+add_action( 'wp_enqueue_scripts', 'my_enqueue_stuff' );
+
+
+// НЕРАБОТАЕТ (НЕ ТО)
+// add_action( 'woocommerce_before_mini_cart', 'wc_mini_cart_before' );
+// function wc_mini_cart_before(){
+// 	echo '<div class="cart_list_wrapper">';
+// }
+
+// add_action( 'woocommerce_after_mini_cart', 'wc_mini_cart_after' );
+// function wc_mini_cart_after(){
+// 	echo '</div>';
+// }
+// НЕРАБОТАЕТ (НЕ ТО)
+
+
+
+// function custom_mini_cart() { 
+//     return '<div class="shopping-cart-wrapper header-customize-item with-price">
+//     <div class="widget_shopping_cart_content">
+//                        <div class="widget_shopping_cart_icon">
+//                         <i class="wicon fa fa-shopping-cart"></i>
+//                         <span class="total">'.
+//                          WC()->cart->get_cart_contents_count().
+//                          '</span>
+//                            </div>
+//                            <div class="sub-total-text">
+//                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₴</span>0.00</span>
+//                             </div>
+//                           <div class="cart_list_wrapper">
+//                         //. woocommerce_mini_cart()
+//                          </div>
+//                          </div>';
+                         
+
+//       }
+//        add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
+
+                       
+
+add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
+
+    ob_start();
+    ?>
+
+    <span class="total">
+        <?php echo WC()->cart->get_cart_contents_count(); ?>
+    </span>
+
+    <?php $fragments['span.total'] = ob_get_clean();
+
+    return $fragments;
+
+} );
+
+/*
+add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
+
+    ob_start();
+    ?>
+
+    <div class="header-quickcart">
+        <?php woocommerce_mini_cart(); ?>
+    </div>
+
+    <?php $fragments['div.header-quickcart'] = ob_get_clean();
+
+    return $fragments;
+
+} );*/
+
+
+// function get_product_category_by_id( $category_id ) {
+//     $term = get_term_by( 'id', $category_id, 'product_cat', 'ARRAY_A' );
+//     return $term['name'];
+// }
+
+
+
+
+// echo get_post_type( get_the_ID() );
+
+
+// (is_home()) ? true : false;

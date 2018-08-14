@@ -30,11 +30,11 @@
          <div id="wrapper-content" class="clearfix">
             <main class="site-content-page">
                <div class="site-content-page-inner ">
-                  <div class="page-content">
+                  <div class="page-content" style="margin-top: 0px;">
                      <div id="post-30" class="post-30 page type-page status-publish hentry">
-                        <div class="entry-content">
+                        <div class="entry-content" style="margin-top: 0px;">
                            <div class="container">
-                              <div class="vc_row wpb_row vc_row-fluid vc_custom_1443867642165">
+                              <div class="vc_row wpb_row vc_row-fluid" style="margin-bottom: 20px !important;"><!--вместо  vc_custom_1443867642165-->
                                  <!-- <div class="col-md-9 col-sm-12 sm-margin-bottom-30 wpb_column vc_column_container vc_col-sm-9">
                                     <div class="vc_column-inner ">
                                        <div class="wpb_wrapper">
@@ -90,8 +90,8 @@
       color: #b78933;
        background:  #fce2e5 ;
        border: #ffffff00 ;
-      color: #fce2e5;
-       background:  #b78933;
+      /*color: #fce2e5;*/
+       /*background:  #b78933;*/
    }
    .carousel-item button.slider_btn:focus{
       color: #b78933;
@@ -110,6 +110,34 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
    }
+
+
+   .carousel-item {
+       height: 100vh;
+       min-height: 300px;
+       background: no-repeat center center scroll;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+   }
+
+   @media(max-width:1024px){
+       .carousel-item{
+           height: 45vh;
+       }
+   }
+   @media(min-width: 992px) and (max-width: 1366px){
+       .carousel-item{
+           height: 70vh;
+       }
+   }
+   /*@media(min-width:992px){*/
+       /*.carousel-item{*/
+           /*height: 490px;*/
+       /*}*/
+   /*}*/
+
 </style>
 
           <div class="col-md-12 col-sm-12 sm-margin-bottom-30 wpb_column vc_column_container vc_col-sm-9">
@@ -120,21 +148,27 @@
                         <li data-target="#carousel1_indicator" data-slide-to="2"></li>
                       </ol>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" style="background-image: url('https://static.tildacdn.com/tild6139-3838-4161-b633-643461643932/11.png')">
 
-     <img class="d-block w-100" src="https://static.tildacdn.com/tild6139-3838-4161-b633-643461643932/11.png" alt="Third slide">
+<!--     <img class="d-block w-100" src="https://static.tildacdn.com/tild6139-3838-4161-b633-643461643932/11.png" alt="Third slide">-->
       <article class="carousel-caption d-none d-md-block">
-       <h5>Добро пожаловать в Flowers Boutique</h5>
+       <h5>Добро пожаловать в Love Roses</h5>
        <!--<p>Добро пожаловать в Flowers Boutique</p>-->
       <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
      </article> <!-- carousel-caption .// -->
       <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
          <button type="button" class="btn  slider_btn" style="    margin: 5px;">Подробнее</button>
-      </article>      
+      </article>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo get_bloginfo('template_url');?>/img/slide1.jpg" alt="Second slide">
-      <article class="carousel-caption d-none d-md-block">
+<!--      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">-->
+<!--          <div class="carousel-caption d-none d-md-block">-->
+<!--              <h3>First Slide</h3>-->
+<!--              <p>This is a description for the first slide.</p>-->
+<!--          </div>-->
+<!--      </div>-->
+    <div class="carousel-item" style="background-image: url(<?=get_bloginfo('template_url');?>/img/slide1.jpg)">
+<!--      <img class="d-block w-100" src="--><?php //echo get_bloginfo('template_url');?><!--/img/slide1.jpg" alt="Second slide">-->
+      <article class="carousel-caption d-md-block">
        <h5>Third slide label</h5>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt</p>
@@ -142,11 +176,11 @@
      </article> <!-- carousel-caption .// -->
      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
          <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
-      </article> 
+      </article>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo get_bloginfo('template_url');?>/img/slide2.JPG" alt="Third slide">
-      <article class="carousel-caption d-none d-md-block">
+    <div class="carousel-item" style="background-image: url(<?=get_bloginfo('template_url');?>/img/slide2.JPG)">
+<!--      <img class="d-block w-100" src="--><?php //echo get_bloginfo('template_url');?><!--/img/slide2.JPG" alt="Third slide">-->
+      <article class="carousel-caption d-md-block">
        <h5>Third slide label</h5>
        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
       tempor incididunt</p>
@@ -154,7 +188,7 @@
      </article> <!-- carousel-caption .// -->
      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
          <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
-      </article> 
+      </article>
     </div>
   </div>
   <a class="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">
@@ -165,8 +199,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div> 
-
+</div>
+<!--              <script src="https://blackrockdigital.github.io/startbootstrap-full-slider/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 
 
 <style type="text/css">
@@ -203,20 +237,16 @@
                                     <div class="vc_column-inner " style="padding: 0px">
                                        <div class="wpb_wrapper">
                                           <div data-height="490" class="sc-product-categories-home-wrap p-color-bg style-02">
+
+
                                              <ul class="product-categories-home row">
-                                                
-                                                <!-- <li><a href="/handmade/product-category/love/" title="Love">Главная</a></li>
-                                                <li> <a href="/handmade/product-category/jewelry/" title="Jewelry">Хит Продаж</a></li>
-                                                <li><a href="/handmade/product-category/illumination/" title="Illumination">Акции и Скидки</a></li>
-                                                <li><a href="/handmade/product-category/greeting-cards/" title="Greeting Cards">Доставка</a></li> -->
                                                 <li class="col-lg col-md col-sm"><a href="/handmade/product-category/every-day/" title="Every Day">Все товары</a></li>
-                                                <!-- <li><a href="/handmade/product-category/birthday-gifts/" title="Birthday Gifts">Отзывы</a></li> -->
-                                                <li class="col-lg col-md col-sm"><a href="/handmade/product-category/uncategorized/" title="Uncategorized">Цветы</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="/handmade/product-category/special-goods/" title="Special Goods">Десерты</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="/handmade/product-category/romantic/" title="Romantic">Игрушки</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="/handmade/product-category/personal/" title="Personal">Шары</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="http://www.kolopar.xyz/product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b/" title="Uncategorized">Цветы</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="http://www.kolopar.xyz/product-category/%d0%b4%d0%b5%d1%81%d0%b5%d1%80%d1%82%d1%8b/" title="Special Goods">Десерты</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="http://www.kolopar.xyz/product-category/%d0%b8%d0%b3%d1%80%d1%83%d1%88%d0%ba%d0%b8/" title="Romantic">Игрушки</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="http://www.kolopar.xyz/product-category/%d1%88%d0%b0%d1%80%d1%8b/" title="Personal">Шары</a></li>
                                              </ul>
-                                             <!-- <a class="show-more"><i class="fas fa-angle-down"></i></a> -->
+                                             
                                           </div>
                                        </div>
                                     </div>
@@ -243,7 +273,7 @@
                                  color: #b88a30;
                               }
                            </style>
-                           <div class="container">
+                           <div class="container" id="bl5">
                               <div class="vc_row wpb_row vc_row-fluid margin-bottom-70">
                                  <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
@@ -259,7 +289,7 @@
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Подарок на любой вкус</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Подарок на любой вкус</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наше главное направление - флористика, но мы можем предложить Вам всевозможные варианты подарка!</p>
                                                       </div>
@@ -277,7 +307,7 @@
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Доставка</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Доставка</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наши курьеры преднесут подарок именно так. как этого хотиты Вы.</p>
                                                       </div>
@@ -296,7 +326,7 @@
                                                          </div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Авторский подарок</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Авторский подарок</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Вы можете сами выбрать каждую деталь Вашего подарка!</p>
                                                       </div>
@@ -307,7 +337,7 @@
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Оплата</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Оплата</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>мы позаботились о том, чтобы у Вас не возникло проблем с оплатой подарка! Оплата курьером или картой*</p>
                                                       </div>
@@ -318,7 +348,7 @@
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Свежие десерты</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Свежие десерты</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Мы не храним готовые десерты, а готовим их индивидуально для Вас!</p>
                                                       </div>
@@ -329,7 +359,7 @@
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="/handmade/image-post-example/" rel="bookmark" title="Image Post Example">Опытные кондитеры</a></h3>
+                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Опытные кондитеры</a></h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наши кондитеры готовят вкусные десерты, при этом делая их в соответствии с нормами полезного питания!</p>
                                                       </div>
@@ -347,7 +377,7 @@
                                  color: black;
                               }
                            </style>
-                           <div class="container">
+                           <div class="container" id="bl2">
                               <div class="vc_row wpb_row vc_row-fluid">
                                  <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
@@ -1323,14 +1353,14 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="container">
+                           <div class="container" id="bl3">
                               <div class="vc_row wpb_row vc_row-fluid vc_custom_1443857836785">
                                  <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
                                        <div class="wpb_wrapper">
                                           <div class="handmade-banner style2   right">
                                              <div class="overflow-hidden">
-                                                <div class="bg-img" style="height:269px; height:269px; background-image: url('http://skinali.izmoroz.com/image/cache/data/catalog/skinali/skinali_35_t3_tender_rose-1210x330.jpg'); background-size:100%"></div>
+                                                <div class="bg-img" style="height:269px; height:269px; background-image:url('http://kolopar.xyz/wp-content/themes/flowers/img/rose_4.jpg'); background-size:100%"></div>
                                              </div>
                                              <div class="overlay-banner">
                                                 <a class="link-banner" title="" target="_self" href="#">
@@ -1693,7 +1723,7 @@
                               </div>
                            </div>
                    
-                           <div class="container">
+                           <div class="container" id="bl7">
                               <div class="vc_row wpb_row vc_row-fluid margin-bottom-80">
                                  <div class="wpb_column vc_column_container vc_col-sm-12">
                                     <div class="vc_column-inner ">
@@ -1732,7 +1762,8 @@
                               </div>
                            </div>
                           <div class="container">
-                              <div class="vc_row wpb_row vc_row-fluid margin-bottom-50">
+                              <h2>О Нас</h2>
+                              <div class="vc_row wpb_row vc_row-fluid margin-bottom-40" id="bl4">
                                  <div class="col-md-4 col-sm-12 sm-margin-bottom-30 wpb_column vc_column_container vc_col-sm-4">
                                     <div class="vc_column-inner ">
                                        <div class="wpb_wrapper">
