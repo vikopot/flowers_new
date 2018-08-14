@@ -277,6 +277,72 @@
      */
 
     // -> START Basic Fields
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'Настрикик шабпки', 'flowers' ),
+    'id'               => 'header',
+    'desc'             => __( 'Настроики шабки', 'redux-framework-demo' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-home'
+) );
+Redux::setSection( $opt_name, array(
+    'title'            => __( 'Checkbox', 'redux-framework-demo' ),
+    'id'               => 'header-up_bar',
+    'subsection'       => true,
+    'customizer_width' => '450px',
+    'desc'             => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/checkbox/" target="_blank">docs.reduxframework.com/core/fields/checkbox/</a>',
+    'fields'           => array(
+        array(
+            'id'       => 'header-logo_img',
+            'type'     => 'checkbox',
+            'title'    => __( 'Checkbox Option', 'redux-framework-demo' ),
+            'subtitle' => __( 'No validation can be done on this field type', 'redux-framework-demo' ),
+            'desc'     => __( 'This is the description field, again good for additional info.', 'redux-framework-demo' ),
+            'default'  => '1'// 1 = on | 0 = off
+        ),
+        array(
+            'id'       => 'header-up_bar-tagline',
+            'type'     => 'text',
+            'title'    => __( 'слоган', 'redux-framework-demo' ),
+            'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
+            'desc'     => __( 'Гармония и любовь, в каждом букете', 'redux-framework-demo' ),
+            'default'  => 'Гармония и любовь, в каждом букете',
+        ),
+        array(
+            'id'       => 'header-up_bar-work_time',
+            'type'     => 'text',
+            'title'    => __( 'Время работы', 'redux-framework-demo' ),
+            'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
+            'desc'     => __( 'с 9:00 до 20:00', 'redux-framework-demo' ),
+            'default'  => 'с 9:00 до 20:00',
+        ),
+        array(
+            'id'       => 'header-socials-fb',
+            'type'     => 'text',
+            'title'    => __( 'url на ваш facebook', 'redux-framework-demo' ),
+            'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
+            'desc'     => __( '//facebook.com', 'redux-framework-demo' ),
+            'default'  => '//facebook.com',
+        ),
+        array(
+            'id'       => 'header-socials-insta',
+            'type'     => 'text',
+            'title'    => __( 'url на ваш instagram', 'redux-framework-demo' ),
+            'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
+            'desc'     => __( '//instagram.com', 'redux-framework-demo' ),
+            'default'  => '//instagram.com',
+        ),
+        array(
+            'id'       => 'header-phone',
+            'type'     => 'text',
+            'title'    => __( 'телефон', 'redux-framework-demo' ),
+            'subtitle' => __( 'Subtitle', 'redux-framework-demo' ),
+            'desc'     => __( 'телефон', 'redux-framework-demo' ),
+            'default'  => '+ 38(094) 949 68 88',
+        ),
+    )
+) );
+
+
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Basic Fields', 'redux-framework-demo' ),
         'id'               => 'basic',
