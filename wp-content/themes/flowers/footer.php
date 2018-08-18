@@ -60,7 +60,7 @@
                                     </div>
                                 </aside>
                             </div>
-                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3">
+                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3 col-xs-6">
                                 <aside id="nav_menu-3" class="widget widget_nav_menu">
                                     <h4 class="widget-title"><span>Страницы</span></h4>
                                     <div class="menu-footer-information-container">
@@ -77,7 +77,7 @@
                                     </div>
                                 </aside>
                             </div>
-                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3">
+                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3 col-xs-6">
                                 <aside id="nav_menu-4" class="widget widget_nav_menu">
                                     <h4 class="widget-title"><span>Категории</span></h4>
                                     <div class="menu-footer-extras-container">
@@ -108,12 +108,34 @@
                 </div>
             </div>
         </div>
+        <style>
+            @media(max-width:767px) {
+
+                footer .bottom-bar-wrapper .sidebar.text-left {
+                    margin: 10px 5px 0px;
+                }
+
+                footer .bottom-bar-wrapper .sidebar.text-left aside#text-3 {
+                    margin: 0px;
+                }
+            }
+
+            @media(min-width:768px) {
+                footer .bottom-bar-wrapper .sidebar.text-left {
+                    display: flex;
+                    align-items: center;
+                }
+                footer .bottom-bar-wrapper .sidebar.text-left .copyright{
+                    margin: 0px;
+                }
+            }
+        </style>
         <div class="bottom-bar-wrapper">
             <div class="bottom-bar-inner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6 sidebar text-left">
-                            <aside id="text-3" class="copyright margin-top-10 widget widget_text">
+                            <aside id="text-3" class="copyright margin-top-10 widget widget_text"><!--copyright margin-top-10 widget widget_text-->
                                 <div class="textwidget">
                                     <div>© Copyright 2018. Love Roses .</div>
                                     <!--                                    <div>Theme Flowers</div>-->
@@ -251,7 +273,7 @@ var yith_woocompare = {"ajaxurl":"\/handmade\/?wc-ajax=%%endpoint%%","actionadd"
 
 
 
-<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?libraries=places&#038;language=en_US&#038;key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&#038;ver=4.7.11'></script>
+<!--<script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?libraries=places&#038;language=en_US&#038;key=AIzaSyDsUcTjt43mTheN9ruCsQVgBE-wgN6_AfY&#038;ver=4.7.11'></script>-->
 <!-- <script src="http://themes.g5plus.net/handmade/wp-content/cache/min/1/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script> -->
 <script src="<?php echo get_bloginfo('template_url');?>/js/b556597d6d10fe6159bc54775bd45117.js" data-minify="1"></script>
 

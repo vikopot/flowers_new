@@ -124,9 +124,13 @@ if ( ! function_exists( 'flowers_woocommerce_product_columns_wrapper' ) ) {
 	 *
 	 * @return  void
 	 */
+
 	function flowers_woocommerce_product_columns_wrapper() {
 		$columns = flowers_woocommerce_loop_columns();
+        //обвертка для продуктов+сфйдбар и навигации
 		echo '<div class="columns-' . absint( $columns ) . '">';
+		//обвертка для продуктов+сайдбар
+		echo '<div class="row">';
 	}
 }
 add_action( 'woocommerce_before_shop_loop', 'flowers_woocommerce_product_columns_wrapper', 40 );

@@ -175,6 +175,10 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 function my_enqueue_stuff() {
 
+
+
+
+
 	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 
@@ -202,6 +206,15 @@ function my_enqueue_stuff() {
     wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/checkout.css');
     wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
   }
+
+    if( is_account_page() )
+    {
+        wp_deregister_style('flowers-bootstrap');
+    }
+
+
+    //    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    //wp_enqueue_script( 'flowers-jqeury', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_stuff' );
 
@@ -242,7 +255,7 @@ add_action( 'wp_enqueue_scripts', 'my_enqueue_stuff' );
 //        add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
 
                        
-
+/*ajax cart*/
 add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
 
     ob_start();
@@ -286,4 +299,17 @@ add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
 // echo get_post_type( get_the_ID() );
 
 
-// (is_home()) ? true : false;
+
+/*ярляк on sale*/
+add_filter('woocommerce_sale_flash', 'woocommerce_custom_sale_text', 10, 3);
+function woocommerce_custom_sale_text($text, $post, $_product)
+{
+    return '<span class="onsale">PUT YOUR TEXT</span>';
+}
+
+/*get current template*/
+add_action('wp_head', 'show_template');
+function show_template() {
+    global $template;
+    echo basename($template);
+}

@@ -36,11 +36,28 @@ global $flowers_theme_opt;
 // $carg_pr = $product->get_category_ids();
 // var_Dump($carg_pr );
 ?>
+
+<?
+//var_dump(get_page_template());
+//var_dump(is_woocommerce());
+//var_dump(is_shop());
+//var_dump(is_product_category());
+//var_dump(is_product_tag());
+//var_dump(is_product());
+//var_dump(is_cart());
+//var_dump(is_checkout());
+//var_dump(is_account_page());
+//var_dump(is_wc_endpoint_url());
+//var_dump(is_ajax());
+?>
+
+<?php global $template; echo basename($template); ?>
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
 
-<? wp_head(); ?>
+<? #wp_head(); ?>
     <meta charset='utf-8'>
     <!-- Slider -->
    
@@ -168,7 +185,7 @@ global $flowers_theme_opt;
             color: #000;
         }
     </style>
-    <?php #wp_head(); ?>
+    <?php wp_head(); ?>
 
 
     
@@ -202,7 +219,7 @@ global $flowers_theme_opt;
                             <div id="lang_sel">
                                 <ul>
                                     <li>
-                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5;width: 50px;">
+                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5px;width: 50px;">
                                     </li>
                                 </ul>
                             </div>
@@ -267,7 +284,7 @@ global $flowers_theme_opt;
         }
     </style>
     <header id="header-mobile" class="mobile-header header-mobile-2">
-        <div class="header-mobile-before"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme"> </a></div>
+        <div class="header-mobile-before"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme"> </a></div>
         <div class="header-container-wrapper menu-drop-fly header-mobile-sticky">
             <div class="container header-mobile-wrapper">
                 <div class="header-mobile-inner">
@@ -423,7 +440,7 @@ global $flowers_theme_opt;
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme" /> </a></div>
+                <div class="header-logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme" /> </a></div>
                 <div class="fr">
                     <div class="header-customize header-customize-right header-customize-separate">
                         <div class="custom-text-wrapper header-customize-item">
@@ -568,7 +585,7 @@ global $flowers_theme_opt;
 									</div>
                                 <?php else : ?>
 
-                                    <div class="cart_list_wrapper">
+<!--                                    <div class="cart_list_wrapper">-->
                                             <ul class="cart_list product_list_widget ps-container" style="max-height: 200px;" data-ps-id="ce07f373-1122-56f6-d23e-5ceaf1405020">
                                                             <li class="empty">
                                                         <h4>Корзина пуста</h4>
@@ -578,7 +595,7 @@ global $flowers_theme_opt;
                                             <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; display: block;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; display: block;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></ul><!-- end product list -->
 
                                             
-                                            </div>
+<!--                                            </div>-->
 
                                 <?php endif; ?>
 
@@ -610,7 +627,7 @@ global $flowers_theme_opt;
             /* header.main-header .menu-wrapper .x-nav-menu li.current-menu-ancestor > a.x-menu-a-text*/
         </style>
         <div class="header-nav-wrapper header-sticky sticky-scheme-inherit nav-hover-primary">
-            <div class="container">
+            <div class="container" style="display: table">
                 <div class="header-wrapper">
                     <div class="header-left">
                         <div id="primary-menu" class="menu-wrapper">
