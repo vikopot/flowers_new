@@ -45,52 +45,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 
     }
     ?>
-<!--    вывод по id гл.категорий -->
-    <div class="row">
-        <div class="col">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <? woocommerce_subcats_from_parentcat_by_ID(17); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <? woocommerce_subcats_from_parentcat_by_ID(18); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <? woocommerce_subcats_from_parentcat_by_ID(19); ?>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <? woocommerce_subcats_from_parentcat_by_ID(20); ?>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 

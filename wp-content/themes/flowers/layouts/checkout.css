@@ -1,0 +1,35 @@
+button.button{
+    padding: 10px 30px !important;
+    /*color: #b78933!important;
+    background:  #fce2e5 ;*/
+    color: #fff;
+    background:  #b78933;
+    border: #ffffff00 ;
+    outline: none !important;
+
+
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+}
+button.button:hover{
+    color: #b78933 !important;
+    background:  #fce2e5 !important;
+    border: #ffffff00 ;
+    /*color: #fce2e5;*/
+    /*background:  #b78933;*/
+}
+button.button:focus{
+    color: #b78933 !important;
+    background:  #fce2e5 !important;
+    border: #ffffff00 ;
+    box-shadow: none !important;
+}
+button.button:active{
+    color: #b78933 !important;
+    background:  #fce2e5 !important;
+    border: #ffffff00 ;
+    box-shadow: none !important;
+}

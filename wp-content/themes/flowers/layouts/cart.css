@@ -1,0 +1,23 @@
+header.entry-header{
+	display: none;
+}
+tbody .woocommerce-cart-form__cart-item.cart_item td.product-remove a{
+	text-align: center;
+    margin: 0 auto;
+}
+
+tbody .woocommerce-cart-form__cart-item.cart_item td.product-price span.woocommerce-Price-amount.amount,
+tbody .woocommerce-cart-form__cart-item.cart_item td.product-subtotal .woocommerce-Price-amount.amount{
+	color: #000;
+}
+.woocommerce table.shop_table.cart tbody td.product-name .product-name-wrap .product-name-inner a:hover{
+	color:#000;
+}
+
+div.cupon{
+	display: none;
+}
+
+.wc-proceed-to-checkout .checkout-button.button{
+
+}
