@@ -181,6 +181,16 @@ function my_enqueue_stuff() {
 
 	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+//    wp_enqueue_script('flowers-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+//    wp_enqueue_script( 'flowers-bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js');
+
+
+    wp_enqueue_style('flowers-main_css',get_template_directory_uri(). '/layouts/6b6cf80f85e258f63952c28df862c487.css');
+
+    wp_enqueue_script('flowers-second_js', get_template_directory_uri() . '/js/1e2d507c5610e2750f2f3a3c173602ca.js');//atr - data-minify="1"
+
+
+
 
     //push
     // <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/14aa881f8080b6a5a1fa5c698ced7c61_0.js" async></script>
@@ -218,6 +228,8 @@ function my_enqueue_stuff() {
 }
 add_action( 'wp_enqueue_scripts', 'my_enqueue_stuff' );
 
+//убирем <meta name="generator" ...>
+remove_action('wp_head', 'wp_generator');
 
 // НЕРАБОТАЕТ (НЕ ТО)
 // add_action( 'woocommerce_before_mini_cart', 'wc_mini_cart_before' );
@@ -308,8 +320,8 @@ function woocommerce_custom_sale_text($text, $post, $_product)
 }
 
 /*get current template*/
-add_action('wp_head', 'show_template');
-function show_template() {
-    global $template;
-    echo basename($template);
-}
+//add_action('wp_head', 'show_template');
+//function show_template() {
+//    global $template;
+//    echo basename($template);
+//}

@@ -51,21 +51,28 @@ global $flowers_theme_opt;
 //var_dump(is_ajax());
 ?>
 
-<?php global $template; echo basename($template); ?>
+<?php
+#вывод темлейта
+#global $template;
+#echo basename($template);
+?>
 
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
 
-<? #wp_head(); ?>
+    <? #wp_head(); ?>
     <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Flowers Roses</title>
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
     <!-- Slider -->
-   
 
-<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+
+    <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 
     <!-- slim->min -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
@@ -81,7 +88,6 @@ global $flowers_theme_opt;
             src: local('gothic'), url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.woff') format('woff'),
             url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.ttf') format('truetype');
         }
-
         @font-face{
             font-family:fontawesome;
             src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?v=4.3.0);
@@ -96,17 +102,22 @@ global $flowers_theme_opt;
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />
     <script src="<?php echo get_bloginfo('template_url');?>/js/1e2d507c5610e2750f2f3a3c173602ca.js" data-minify="1"></script>
     <script type="text/javascript">document.documentElement.className = document.documentElement.className + ' yes-js js_active js'</script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="pingback" <a href="http://themes.g5plus.net/handmade/xmlrpc.php" />
-    <link rel="shortcut icon" href="http://themes.g5plus.net/handmade/wp-content/themes/handmade/assets/images/favicon.ico" />
-    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
-    <title>Home 02 &#8211; HandMade</title>
+<!--    <meta charset="UTF-8" />-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+<!--    <link rel="pingback" <a href="http://themes.g5plus.net/handmade/xmlrpc.php" />-->
+<!--    <link rel="shortcut icon" href="http://themes.g5plus.net/handmade/wp-content/themes/handmade/assets/images/favicon.ico" />-->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
     <style>.wishlist_table .add_to_cart,a.add_to_wishlist.button.alt{border-radius:16px;-moz-border-radius:16px;-webkit-border-radius:16px}</style>
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
-    <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Feed" href="http://themes.g5plus.net/handmade/feed/" />
-    <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Comments Feed" href="http://themes.g5plus.net/handmade/comments/feed/" />
+<!--    <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Feed" href="http://themes.g5plus.net/handmade/feed/" />-->
+<!--    <link rel="alternate" type="application/rss+xml" title="HandMade &raquo; Comments Feed" href="http://themes.g5plus.net/handmade/comments/feed/" />-->
 
 
     <style type="text/css">img.wp-smiley,img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0
@@ -120,12 +131,12 @@ global $flowers_theme_opt;
     </style>
     <link rel='stylesheet' id='redux-google-fonts-g5plus_handmade_options-css' property='stylesheet' href='http://fonts.googleapis.com/css?family=Varela+Round%3A400%7CPlayfair+Display%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic&#038;subset=latin&#038;ver=1532339728' type='text/css' media='all' />
 
-    <link rel='https://api.w.org/' href='http://themes.g5plus.net/handmade/wp-json/' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://themes.g5plus.net/handmade/xmlrpc.php?rsd" />
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://themes.g5plus.net/handmade/wp-includes/wlwmanifest.xml" />
+<!--    <link rel='https://api.w.org/' href='http://themes.g5plus.net/handmade/wp-json/' />-->
+<!--    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://themes.g5plus.net/handmade/xmlrpc.php?rsd" />-->
+<!--    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://themes.g5plus.net/handmade/wp-includes/wlwmanifest.xml" />-->
 
-    <link rel="canonical" href="http://themes.g5plus.net/handmade/home-02/" />
-    <link rel='shortlink' href='http://themes.g5plus.net/handmade/?p=30' />
+<!--    <link rel="canonical" href="http://themes.g5plus.net/handmade/home-02/" />-->
+<!--    <link rel='shortlink' href='http://themes.g5plus.net/handmade/?p=30' />-->
     <link rel="alternate" type="application/json+oembed" href="http://themes.g5plus.net/handmade/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthemes.g5plus.net%2Fhandmade%2Fhome-02%2F" />
     <link rel="alternate" type="text/xml+oembed" href="http://themes.g5plus.net/handmade/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthemes.g5plus.net%2Fhandmade%2Fhome-02%2F&#038;format=xml" />
     <style id="g5plus_custom_style" type="text/css"></style>
@@ -134,13 +145,14 @@ global $flowers_theme_opt;
         <style>.woocommerce-product-gallery{opacity:1 !important}</style>
     </noscript>
 
-    <noscript> <img height="1" width="1" style="display:none"
-                    src="https://www.facebook.com/tr?id=755297787996624&ev=PageView&noscript=1"/> </noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=755297787996624&ev=PageView&noscript=1"/>
+    </noscript>
     <!-- <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress." /> -->
     <!--[if lte IE 9]>
     <link rel="stylesheet" type="text/css" href="http://themes.g5plus.net/handmade/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen">
     <![endif]-->
-    <meta name="generator" content="Powered by Slider Revolution 5.4.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<!--    <meta name="generator" content="Powered by Slider Revolution 5.4.1 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />-->
 
     <!-- <link rel="stylesheet" type="text/css" media="all" href="http://themes.g5plus.net/handmade/?custom-page=header-custom-css&amp;current_page_id=30" /> -->
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_url');?>/layouts/header-custom-css.css" />
@@ -186,9 +198,10 @@ global $flowers_theme_opt;
         }
     </style>
     <?php wp_head(); ?>
+    <style>body{font-size: 16px}</style>
 
 
-    
+
 </head>
 <body class="page-template-default page page-id-30 woocommerce-no-js footer-static header-2 woocommerce wpb-js-composer js-comp-ver-5.1.1 vc_responsive" style="font-family: 'gothic'!important;">
 <div id="wrapper">
@@ -219,7 +232,7 @@ global $flowers_theme_opt;
                             <div id="lang_sel">
                                 <ul>
                                     <li>
-                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5px;width: 50px;">
+                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Flowers Roses" width="30px" style="padding-right: 5px;width: 50px;">
                                     </li>
                                 </ul>
                             </div>
@@ -284,7 +297,7 @@ global $flowers_theme_opt;
         }
     </style>
     <header id="header-mobile" class="mobile-header header-mobile-2">
-        <div class="header-mobile-before"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme"> </a></div>
+        <div class="header-mobile-before"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="Flowers Roses"> </a></div>
         <div class="header-container-wrapper menu-drop-fly header-mobile-sticky">
             <div class="container header-mobile-wrapper">
                 <div class="header-mobile-inner">
@@ -440,7 +453,7 @@ global $flowers_theme_opt;
                         </ul>
                     </div>
                 </div>
-                <div class="header-logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="HandMade - Shop WordPress WooCommerce Theme"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="HandMade - Shop WordPress WooCommerce Theme" /> </a></div>
+                <div class="header-logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"> <img src=<?php echo get_bloginfo('template_url');?>/img/love_roses_nocrown1.png" alt="Flowers Roses" /> </a></div>
                 <div class="fr">
                     <div class="header-customize header-customize-right header-customize-separate">
                         <div class="custom-text-wrapper header-customize-item">
@@ -632,7 +645,7 @@ global $flowers_theme_opt;
                     <div class="header-left">
                         <div id="primary-menu" class="menu-wrapper">
                             <ul id="main-menu" class="main-menu x-nav-menu x-nav-menu_main-menu x-animate-slide-up" data-breakpoint="991">
-                                <li class="logo-sticky"> <a href="/handmade/" title="HandMade - Shop WordPress WooCommerce Theme"> <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme"/> </a></li>
+                                <li class="logo-sticky"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"> <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Flowers Roses"/> </a></li>
                                 <li id="menu-item-2294" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children x-menu-item x-sub-menu-standard">
                                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="x-menu-a-text"><span class="x-menu-text">Главная</span></a>
                                 </li>
