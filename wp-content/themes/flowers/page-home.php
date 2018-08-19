@@ -421,19 +421,19 @@ $count_products = 8;
                                                                                    <div class="product-thumb-primary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" srcset="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 600w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 150w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 300w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 180w" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                                    <div class="product-thumb-secondary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-shop_catalog size-shop_catalog" alt="" /></div>
                                                                                    <a class="product-link" <a href="<?=get_permalink( $products_toys[$o]->id );?>"></a>
-                                                                                   <div class="product-actions">
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
-                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">
-                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div style="clear:both"></div>
-                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                                       </div>
-                                                                                       <div class="clear"></div>
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="<?=$products_toys[$o]->id?>" <a href="<?=get_permalink( $products_toys[$o]->id );?>"><i class="fas fa-search"></i></a>
-                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="<?=get_permalink( $products_toys[$o]->id );?>" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
-                                                                                   </div>
+<!--                                                                                   <div class="product-actions">-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
+<!--                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div style="clear:both"></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                                                       </div>-->
+<!--                                                                                       <div class="clear"></div>-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="--><?//=$products_toys[$o]->id?><!--" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--"><i class="fas fa-search"></i></a>-->
+<!--                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
+<!--                                                                                   </div>-->
                                                                                </div>
                                                                                <div class="product-info">
                                                                                    <h3 class="product-name p-font"><a href="<?=get_permalink( $products_toys[$o]->id );?>"><?=$products_toys[$o]->name;?></a></h3>
@@ -685,19 +685,19 @@ $count_products = 8;
                                                                                    <div class="product-thumb-primary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" srcset="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 600w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 150w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 300w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 180w" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                                    <div class="product-thumb-secondary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-shop_catalog size-shop_catalog" alt="" /></div>
                                                                                    <a class="product-link" <a href="<?=get_permalink( $products_toys[$o]->id );?>"></a>
-                                                                                   <div class="product-actions">
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
-                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">
-                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div style="clear:both"></div>
-                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                                       </div>
-                                                                                       <div class="clear"></div>
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="<?=$products_toys[$o]->id?>" <a href="<?=get_permalink( $products_toys[$o]->id );?>"><i class="fas fa-search"></i></a>
-                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="<?=get_permalink( $products_toys[$o]->id );?>" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
-                                                                                   </div>
+<!--                                                                                   <div class="product-actions">-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
+<!--                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div style="clear:both"></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                                                       </div>-->
+<!--                                                                                       <div class="clear"></div>-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="--><?//=$products_toys[$o]->id?><!--" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--"><i class="fas fa-search"></i></a>-->
+<!--                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
+<!--                                                                                   </div>-->
                                                                                </div>
                                                                                <div class="product-info">
                                                                                    <h3 class="product-name p-font"><a href="<?=get_permalink( $products_toys[$o]->id );?>"><?=$products_toys[$o]->name;?></a></h3>
@@ -982,19 +982,19 @@ $count_products = 8;
                                                                                    <div class="product-thumb-primary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" srcset="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 600w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 150w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 300w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 180w" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                                    <div class="product-thumb-secondary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-shop_catalog size-shop_catalog" alt="" /></div>
                                                                                    <a class="product-link" <a href="<?=get_permalink( $products_toys[$o]->id );?>"></a>
-                                                                                   <div class="product-actions">
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
-                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">
-                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div style="clear:both"></div>
-                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                                       </div>
-                                                                                       <div class="clear"></div>
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="<?=$products_toys[$o]->id?>" <a href="<?=get_permalink( $products_toys[$o]->id );?>"><i class="fas fa-search"></i></a>
-                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="<?=get_permalink( $products_toys[$o]->id );?>" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
-                                                                                   </div>
+<!--                                                                                   <div class="product-actions">-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
+<!--                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div style="clear:both"></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                                                       </div>-->
+<!--                                                                                       <div class="clear"></div>-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="--><?//=$products_toys[$o]->id?><!--" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--"><i class="fas fa-search"></i></a>-->
+<!--                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
+<!--                                                                                   </div>-->
                                                                                </div>
                                                                                <div class="product-info">
                                                                                    <h3 class="product-name p-font"><a href="<?=get_permalink( $products_toys[$o]->id );?>"><?=$products_toys[$o]->name;?></a></h3>
@@ -1279,19 +1279,19 @@ $count_products = 8;
                                                                                    <div class="product-thumb-primary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" srcset="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 600w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 150w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 300w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 180w" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                                    <div class="product-thumb-secondary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-shop_catalog size-shop_catalog" alt="" /></div>
                                                                                    <a class="product-link" <a href="<?=get_permalink( $products_toys[$o]->id );?>"></a>
-                                                                                   <div class="product-actions">
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
-                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">
-                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                                                           <div style="clear:both"></div>
-                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                                                       </div>
-                                                                                       <div class="clear"></div>
-                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="<?=$products_toys[$o]->id?>" <a href="<?=get_permalink( $products_toys[$o]->id );?>"><i class="fas fa-search"></i></a>
-                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="<?=get_permalink( $products_toys[$o]->id );?>" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
-                                                                                   </div>
+<!--                                                                                   <div class="product-actions">-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
+<!--                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                                                           <div style="clear:both"></div>-->
+<!--                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                                                       </div>-->
+<!--                                                                                       <div class="clear"></div>-->
+<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="--><?//=$products_toys[$o]->id?><!--" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--"><i class="fas fa-search"></i></a>-->
+<!--                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
+<!--                                                                                   </div>-->
                                                                                </div>
                                                                                <div class="product-info">
                                                                                    <h3 class="product-name p-font"><a href="<?=get_permalink( $products_toys[$o]->id );?>"><?=$products_toys[$o]->name;?></a></h3>
@@ -1636,19 +1636,19 @@ $count_products = 8;
                                                          <div class="product-flash-wrap"></div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="" src="<?=get_the_post_thumbnail_url( $recent_product[0]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[0]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="2239" <a href="/handmade/product/birthday-gifts-products/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="/handmade/product/birthday-gifts-products/" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="2239" <a href="/handmade/product/birthday-gifts-products/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="/handmade/product/birthday-gifts-products/" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <h3 class="product-name p-font"><a href="<?=get_permalink( $recent_product[0]->id );?>"><?=$recent_product[0]->name;?></a></h3>
@@ -1673,22 +1673,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-1 post-1569 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-every-day product_cat-personal product_tag-birthday product_tag-every-day product_tag-person product_tag-women instock shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-new product-flash">New</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-new product-flash">New</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="<?=get_the_post_thumbnail_url( $recent_product[1]->id, 'full' );?>" width="570" height="570" alt="Yellow Pillow" src="https://cdn3.flowwow.com/data/flowers/270x300/51/1509803055_34794351.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[1]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/yellow-pillow/?action=yith-woocompare-add-product&amp;id=1569" class="compare" data-product_id="1569"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1569">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1569" rel="nofollow" data-product-id="1569" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1569" <a href="/handmade/product/yellow-pillow/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1569" data-quantity="1" data-product_id="1569" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/yellow-pillow/?action=yith-woocompare-add-product&amp;id=1569" class="compare" data-product_id="1569"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1569">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1569" rel="nofollow" data-product-id="1569" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1569" <a href="/handmade/product/yellow-pillow/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1569" data-quantity="1" data-product_id="1569" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5</span></div>
@@ -1714,22 +1716,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-1 post-1567 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-jewelry product_cat-personal product_cat-special-goods product_tag-birthday product_tag-jewelry product_tag-person instock sale shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-sale product-flash">12.5%</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-sale product-flash">12.5%</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Bracelets With Names" src="<?=get_the_post_thumbnail_url( $recent_product[2]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[2]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="<?=get_permalink( $recent_product[2]->id );?>" class="compare" data-product_id="1567"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1567">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1567" rel="nofollow" data-product-id="1567" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1567" <a href="/handmade/product/bracelets-with-names/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1567" data-quantity="1" data-product_id="1567" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="--><?//=get_permalink( $recent_product[2]->id );?><!--" class="compare" data-product_id="1567"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1567">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1567" rel="nofollow" data-product-id="1567" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1567" <a href="/handmade/product/bracelets-with-names/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1567" data-quantity="1" data-product_id="1567" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:60%">Rated <strong class="rating">3.00</strong> out of 5</span></div>
@@ -1758,19 +1762,19 @@ $count_products = 8;
                                                          <div class="product-flash-wrap"></div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Knit Handmade Bracelets" src="<?=get_the_post_thumbnail_url( $recent_product[3]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[3]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="<?=get_permalink( $recent_product[3]->id );?>" class="compare" data-product_id="1566"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1566">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1566" rel="nofollow" data-product-id="1566" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1566" <a href="/handmade/product/knit-handmade-bracelets-2/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1566" data-quantity="1" data-product_id="1566" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="--><?//=get_permalink( $recent_product[3]->id );?><!--" class="compare" data-product_id="1566"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1566">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1566" rel="nofollow" data-product-id="1566" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1566" <a href="/handmade/product/knit-handmade-bracelets-2/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1566" data-quantity="1" data-product_id="1566" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span></div>
@@ -1799,19 +1803,19 @@ $count_products = 8;
                                                          <div class="product-flash-wrap"></div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Colorful Bracelet" src="<?=get_the_post_thumbnail_url( $recent_product[4]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[4]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="<?=get_permalink( $recent_product[4]->id );?>" class="compare" data-product_id="1565"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1565">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1565" rel="nofollow" data-product-id="1565" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1565" <a href="/handmade/product/colorful-bracelet/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1565" data-quantity="1" data-product_id="1565" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="--><?//=get_permalink( $recent_product[4]->id );?><!--" class="compare" data-product_id="1565"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1565">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1565" rel="nofollow" data-product-id="1565" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1565" <a href="/handmade/product/colorful-bracelet/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1565" data-quantity="1" data-product_id="1565" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <h3 class="product-name p-font"><a href="<?=get_permalink( $recent_product[4]->id );?>"><?=$recent_product[4]->name;?></a></h3>
@@ -1836,22 +1840,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-1 post-1559 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-jewelry product_cat-personal product_cat-special-goods product_tag-birthday product_tag-jewelry product_tag-person instock sale shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-sale product-flash">25%</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-sale product-flash">25%</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Knit From Wool Bracelets" src="<?=get_the_post_thumbnail_url( $recent_product[5]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[5]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="<?=get_permalink( $recent_product[5]->id );?>" class="compare" data-product_id="1559"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1559">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1559" rel="nofollow" data-product-id="1559" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1559" <a href="/handmade/product/knit-from-wool-bracelets/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1559" data-quantity="1" data-product_id="1559" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="--><?//=get_permalink( $recent_product[5]->id );?><!--" class="compare" data-product_id="1559"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1559">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1559" rel="nofollow" data-product-id="1559" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1559" <a href="/handmade/product/knit-from-wool-bracelets/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1559" data-quantity="1" data-product_id="1559" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span></div>
@@ -1877,22 +1883,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-6 col-sm-6 col-xs-6  page-2 post-1558 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-illumination product_cat-jewelry product_cat-personal product_tag-birthday product_tag-illumination product_tag-jewelry product_tag-person instock shipping-taxable purchasable product-type-variable">
                                                    <div class="product-item-inner double-size">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"><span class="on-hot product-flash">Hot</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-hot product-flash">Hot</span>-->
+                                                         </div>
                                                          <div class="product-thumb-one"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Friendship Bracelets" src="<?=get_the_post_thumbnail_url( $recent_product[6]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[6]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/friendship-bracelets/?action=yith-woocompare-add-product&amp;id=1558" class="compare" data-product_id="1558"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1558">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1558" rel="nofollow" data-product-id="1558" data-product-type="variable" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1558" <a href="/handmade/product/friendship-bracelets/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Select options"><a rel="nofollow" <a href="/handmade/product/friendship-bracelets/" data-quantity="1" data-product_id="1558" data-product_sku="" class="button product_type_variable add_to_cart_button btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Select options</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/friendship-bracelets/?action=yith-woocompare-add-product&amp;id=1558" class="compare" data-product_id="1558"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1558">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1558" rel="nofollow" data-product-id="1558" data-product-type="variable" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1558" <a href="/handmade/product/friendship-bracelets/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Select options"><a rel="nofollow" <a href="/handmade/product/friendship-bracelets/" data-quantity="1" data-product_id="1558" data-product_sku="" class="button product_type_variable add_to_cart_button btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Select options</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:40%">Rated <strong class="rating">2.00</strong> out of 5</span></div>
@@ -1918,22 +1926,25 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-2 post-1557 product type-product status-publish has-post-thumbnail product_cat-every-day product_cat-jewelry product_cat-personal product_cat-special-goods product_tag-every-day product_tag-jewelry product_tag-special-goods last instock sale shipping-taxable product-type-external">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-sale product-flash">11.1%</span> <span class="on-new product-flash">New</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-sale product-flash">11.1%</span>-->
+<!--                                                             <span class="on-new product-flash">New</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Wool Knit Scarf-Coat" src="<?=get_the_post_thumbnail_url( $recent_product[7]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[7]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/wool-knit-scarf-coat/?action=yith-woocompare-add-product&amp;id=1557" class="compare" data-product_id="1557"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1557">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1557" rel="nofollow" data-product-id="1557" data-product-type="external" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1557" <a href="/handmade/product/wool-knit-scarf-coat/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Buy Product"><a rel="nofollow" href="http://themeforest.net/user/g5theme" data-quantity="1" data-product_id="1557" data-product_sku="" class="button product_type_external btn_add_to_cart"><i class="fas fa-info"></i> Buy Product</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/wool-knit-scarf-coat/?action=yith-woocompare-add-product&amp;id=1557" class="compare" data-product_id="1557"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1557">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1557" rel="nofollow" data-product-id="1557" data-product-type="external" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1557" <a href="/handmade/product/wool-knit-scarf-coat/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Buy Product"><a rel="nofollow" href="http://themeforest.net/user/g5theme" data-quantity="1" data-product_id="1557" data-product_sku="" class="button product_type_external btn_add_to_cart"><i class="fas fa-info"></i> Buy Product</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span></div>
@@ -1962,19 +1973,19 @@ $count_products = 8;
                                                          <div class="product-flash-wrap"></div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Greeting Cards" src="<?=get_the_post_thumbnail_url( $recent_product[8]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[8]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/greeting-cards/?action=yith-woocompare-add-product&amp;id=1556" class="compare" data-product_id="1556"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1556">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1556" rel="nofollow" data-product-id="1556" data-product-type="variable" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1556" <a href="/handmade/product/greeting-cards/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Select options"><a rel="nofollow" <a href="/handmade/product/greeting-cards/" data-quantity="1" data-product_id="1556" data-product_sku="" class="button product_type_variable add_to_cart_button btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Select options</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/greeting-cards/?action=yith-woocompare-add-product&amp;id=1556" class="compare" data-product_id="1556"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1556">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1556" rel="nofollow" data-product-id="1556" data-product-type="variable" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1556" <a href="/handmade/product/greeting-cards/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Select options"><a rel="nofollow" <a href="/handmade/product/greeting-cards/" data-quantity="1" data-product_id="1556" data-product_sku="" class="button product_type_variable add_to_cart_button btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Select options</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <h3 class="product-name p-font"><a href="<?=get_permalink( $recent_product[8]->id );?>"><?=$recent_product[8]->name;?></a></h3>
@@ -1999,22 +2010,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-6 col-sm-6 col-xs-6  page-2 post-1555 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-illumination product_cat-romantic product_cat-special-goods product_tag-birthday product_tag-illumination product_tag-romatic product_tag-special-goods instock shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner double-size">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-new product-flash">New</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-new product-flash">New</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Flower Bending" src="<?=get_the_post_thumbnail_url( $recent_product[9]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[9]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/flower-bending/?action=yith-woocompare-add-product&amp;id=1555" class="compare" data-product_id="1555"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1555">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1555" rel="nofollow" data-product-id="1555" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1555" <a href="/handmade/product/flower-bending/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1555" data-quantity="1" data-product_id="1555" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/flower-bending/?action=yith-woocompare-add-product&amp;id=1555" class="compare" data-product_id="1555"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1555">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1555" rel="nofollow" data-product-id="1555" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1555" <a href="/handmade/product/flower-bending/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1555" data-quantity="1" data-product_id="1555" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span></div>
@@ -2040,22 +2053,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-2 post-1554 product type-product status-publish has-post-thumbnail product_cat-birthday-gifts product_cat-illumination product_cat-romantic product_cat-special-goods product_tag-birthday product_tag-illumination product_tag-romatic product_tag-special-goods instock shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"><span class="on-hot product-flash">Hot</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-hot product-flash">Hot</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Handmade Paper Stars" src="<?=get_the_post_thumbnail_url( $recent_product[10]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[10]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/handmade-paper-stars/?action=yith-woocompare-add-product&amp;id=1554" class="compare" data-product_id="1554"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1554">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1554" rel="nofollow" data-product-id="1554" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1554" <a href="/handmade/product/handmade-paper-stars/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1554" data-quantity="1" data-product_id="1554" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/handmade-paper-stars/?action=yith-woocompare-add-product&amp;id=1554" class="compare" data-product_id="1554"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1554">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1554" rel="nofollow" data-product-id="1554" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1554" <a href="/handmade/product/handmade-paper-stars/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1554" data-quantity="1" data-product_id="1554" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:80%">Rated <strong class="rating">4.00</strong> out of 5</span></div>
@@ -2081,22 +2096,24 @@ $count_products = 8;
                                                 <div class="product-item-wrap rating-visible col-md-3 col-sm-6 col-xs-6  page-2 post-1553 product type-product status-publish has-post-thumbnail product_cat-every-day product_cat-personal product_cat-special-goods product_tag-every-day product_tag-person product_tag-special-goods last instock sale shipping-taxable purchasable product-type-simple">
                                                    <div class="product-item-inner ">
                                                       <div class="product-thumb">
-                                                         <div class="product-flash-wrap"> <span class="on-sale product-flash">25%</span></div>
+                                                         <div class="product-flash-wrap">
+<!--                                                             <span class="on-sale product-flash">25%</span>-->
+                                                         </div>
                                                          <div class="product-thumb-primary"> <img class="attachment-shop_catalog wp-post-image" width="570" height="570" alt="Funny Wool Basket" src="<?=get_the_post_thumbnail_url( $recent_product[11]->id, 'full' );?>"></div>
                                                          <a class="product-link" <a href="<?=get_permalink( $recent_product[11]->id );?>"></a>
-                                                         <div class="product-actions">
-                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/funny-wool-basket/?action=yith-woocompare-add-product&amp;id=1553" class="compare" data-product_id="1553"><i class="fas fa-exchange-alt"></i> </a>
-                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1553">
-                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1553" rel="nofollow" data-product-id="1553" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>
-                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>
-                                                               <div style="clear:both"></div>
-                                                               <div class="yith-wcwl-wishlistaddresponse"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1553" <a href="/handmade/product/funny-wool-basket/"><i class="fas fa-search"></i></a>
-                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1553" data-quantity="1" data-product_id="1553" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>
-                                                         </div>
+<!--                                                         <div class="product-actions">-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/funny-wool-basket/?action=yith-woocompare-add-product&amp;id=1553" class="compare" data-product_id="1553"><i class="fas fa-exchange-alt"></i> </a>-->
+<!--                                                            <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1553">-->
+<!--                                                               <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=1553" rel="nofollow" data-product-id="1553" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
+<!--                                                               <div style="clear:both"></div>-->
+<!--                                                               <div class="yith-wcwl-wishlistaddresponse"></div>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="clear"></div>-->
+<!--                                                            <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="1553" <a href="/handmade/product/funny-wool-basket/"><i class="fas fa-search"></i></a>-->
+<!--                                                            <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="Add to cart"><a rel="nofollow" href="/handmade/home-02/?add-to-cart=1553" data-quantity="1" data-product_id="1553" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart"><i class="fas fa-shopping-cart"></i> Add to cart</a></div>-->
+<!--                                                         </div>-->
                                                       </div>
                                                       <div class="product-info">
                                                          <div class="star-rating"><span style="width:60%">Rated <strong class="rating">3.00</strong> out of 5</span></div>

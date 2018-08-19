@@ -42,46 +42,46 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
          <div class="product-flash-wrap">
          	<!-- <span class="on-new product-flash">New</span> -->
-         	<?
-				$date1 = $product->get_date_created();
-				$date1  = substr($date1, 0, 10);
-				// echo $date1;
-				$date2 = date("Y.m.d");
-				// $date2 = '2018-12-03';
-
-				$date2 = str_replace('.', '-', $date2);
-				// echo $date2;
-
-
-				$diff = abs(strtotime($date2) - strtotime($date1));
-
-				$years = floor($diff / (365*60*60*24));
-				$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
-				$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
-
-				// printf("%d years, %d months, %d days\n", $years, $months, $days);
-				if( $years > 0 ||  $months > 0 || $days > 7)
-				{
-					// echo "старый";
-					if ( !empty( $product->get_sale_price() ) ) { ?>
-		         		<span class="on-sale product-flash">
-		         		<?
-		         		//a < b = ((b-a)/a) * 100
-		         		$s_p = $product->get_sale_price();//a
-		         		$r_p = $product->get_regular_price();//b
-		         		
-		         		$percent = $s_p / $r_p ;
-		         		$percent = 1 - $percent;
-		         		$percent = $percent * 100;
-		         		echo intval($percent); 
-		         		?>%</span><? 
-		         	}
-				}
-				else{
-					// echo "new";?>
-					<span class="on-new product-flash">New</span>
-					<?
-				}
+<!--         	--><?//
+//				$date1 = $product->get_date_created();
+//				$date1  = substr($date1, 0, 10);
+//				// echo $date1;
+//				$date2 = date("Y.m.d");
+//				// $date2 = '2018-12-03';
+//
+//				$date2 = str_replace('.', '-', $date2);
+//				// echo $date2;
+//
+//
+//				$diff = abs(strtotime($date2) - strtotime($date1));
+//
+//				$years = floor($diff / (365*60*60*24));
+//				$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
+//				$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
+//
+//				// printf("%d years, %d months, %d days\n", $years, $months, $days);
+//				if( $years > 0 ||  $months > 0 || $days > 7)
+//				{
+//					// echo "старый";
+//					if ( !empty( $product->get_sale_price() ) ) { ?>
+<!--		         		<span class="on-sale product-flash">-->
+<!--		         		--><?//
+//		         		//a < b = ((b-a)/a) * 100
+//		         		$s_p = $product->get_sale_price();//a
+//		         		$r_p = $product->get_regular_price();//b
+//
+//		         		$percent = $s_p / $r_p ;
+//		         		$percent = 1 - $percent;
+//		         		$percent = $percent * 100;
+//		         		echo intval($percent);
+//		         		?><!--%</span>--><?//
+//		         	}
+//				}
+//				else{
+//					// echo "new";?>
+<!--					<span class="on-new product-flash">New</span>-->
+<!--					--><?//
+//				}
 
 				?>
          	

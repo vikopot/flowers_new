@@ -55,7 +55,7 @@
                             <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3">
                                 <aside id="wolverine-footer-logo-2" class="widget widget-footer-logo">
                                     <div class="footer-logo">
-                                        <a href="/handmade"><img class="footer-logo-img" src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Handmade" style="        width: 80px;"/></a>
+                                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"><img class="footer-logo-img" src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Flowers Roses" style="        width: 80px;"/></a>
                                         <div class="sub-description"> Доставка цветов по всей Одессе. Любовь и забота о клиенте в каждом букете.</div>
                                     </div>
                                 </aside>
@@ -281,12 +281,12 @@ var yith_woocompare = {"ajaxurl":"\/handmade\/?wc-ajax=%%endpoint%%","actionadd"
 
 <!-- нужен для бургера -->
 
-
-<script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel();
-    });
-</script>
+<!---->
+<!--<script>-->
+<!--    $(document).ready(function(){-->
+<!--        $(".owl-carousel").owlCarousel();-->
+<!--    });-->
+<!--</script>-->
 <?php wp_footer(); ?>
 </body>
 </html>

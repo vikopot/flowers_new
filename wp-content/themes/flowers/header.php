@@ -53,8 +53,8 @@ global $flowers_theme_opt;
 
 <?php
 #вывод темлейта
-#global $template;
-#echo basename($template);
+global $template;
+echo basename($template);
 ?>
 
 <!DOCTYPE html>

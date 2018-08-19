@@ -128,7 +128,7 @@ if ( ! function_exists( 'flowers_woocommerce_product_columns_wrapper' ) ) {
 	function flowers_woocommerce_product_columns_wrapper() {
 		$columns = flowers_woocommerce_loop_columns();
         //обвертка для продуктов+сфйдбар и навигации
-		echo '<div class="columns-' . absint( $columns ) . '">';
+		echo '<div class="columns-' . absint( $columns ) . ' container">';
 		//обвертка для продуктов+сайдбар
 		echo '<div class="row">';
 	}

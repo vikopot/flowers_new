@@ -1,18 +1,18 @@
-/*style.css*/
-@font-face {
-    font-family: gothic;
-    src: url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.eot);
-    src: local(gothic), url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.woff) format(woff),
-url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.ttf) format(truetype);
-}
+/*!*style.css*!*/
+/*@font-face {*/
+    /*font-family: gothic;*/
+    /*src: url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.eot);*/
+    /*src: local(gothic), url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.woff) format(woff),*/
+/*url(<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.ttf) format(truetype);*/
+/*}*/
 
-@font-face{
-    font-family:fontawesome;
-    src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?v=4.3.0);
-    src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0) format(embedded-opentype),
-    url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff2?v=4.3.0) format(woff2),
-    url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff?v=4.3.0) format(woff),
-    url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.ttf?v=4.3.0) format(truetype),
-    url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format(svg);
-    font-weight:400;font-style:normal;
-}
+/*@font-face{*/
+    /*font-family:fontawesome;*/
+    /*src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?v=4.3.0);*/
+    /*src:url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0) format(embedded-opentype),*/
+    /*url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff2?v=4.3.0) format(woff2),*/
+    /*url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.woff?v=4.3.0) format(woff),*/
+    /*url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.ttf?v=4.3.0) format(truetype),*/
+    /*url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format(svg);*/
+    /*font-weight:400;font-style:normal;*/
+/*}*/
