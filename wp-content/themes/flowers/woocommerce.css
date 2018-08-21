@@ -468,18 +468,25 @@ p.no-comments {
 	content: "";
 	display: table;
 	table-layout: fixed;
-	background-color: #0f834d;
+	background-color: #fff;
 	clear: both;
+}
+
+.woocommerce-message a{
+	color: #887b7b;
+}
+.woocommerce-message a:hover{
+	color: #000;
 }
 
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: #3D9CD2;
+	background-color: #fff;
 }
 
 .woocommerce-error {
-	background-color: #e2401c;
+	background-color: #fff;
 }
 
 .demo_store {

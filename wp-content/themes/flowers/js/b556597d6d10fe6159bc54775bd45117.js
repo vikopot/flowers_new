@@ -11971,6 +11971,11 @@ var G5Plus = G5Plus || {};
                 $('#nav-menu-mobile').removeClass('in');
                 $('.toggle-icon-wrapper[data-ref]').removeClass('in');
             });
+            $('.x-menu-a-text.scrollto_link').click(function() {
+                $body.removeClass('menu-mobile-in');
+                $('#nav-menu-mobile').removeClass('in');
+                $('.toggle-icon-wrapper[data-ref]').removeClass('in');
+            });
         },
         search: function() {
             var $search_popup = $('#search_popup_wrapper');

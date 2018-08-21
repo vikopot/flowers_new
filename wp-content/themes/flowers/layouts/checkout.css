@@ -33,3 +33,16 @@ button.button:active{
     border: #ffffff00 ;
     box-shadow: none !important;
 }
+.woocommerce table.woocommerce-checkout-review-order-table thead td,
+.woocommerce table.woocommerce-checkout-review-order-table .cart-subtotal th,
+.woocommerce table.woocommerce-checkout-review-order-table thead th,
+.woocommerce table.woocommerce-checkout-review-order-table .cart-subtotal td,
+.woocommerce table.woocommerce-checkout-review-order-table .order-total th,
+.woocommerce table.woocommerce-checkout-review-order-table .order-total td{
+    color: #000;
+}
+.hentry {
+    margin: auto;
+    margin-right:auto;
+    margin-left: auto;
+}

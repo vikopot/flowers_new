@@ -22,6 +22,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     <?=do_shortcode('[searchandfilter id="wpf_5b76d56e36d0c"]');?>
     <?=do_shortcode('[searchandfilter id="wpf_5b76d6f04b6f0"]');?>
     <?=do_shortcode('[searchandfilter id="wpf_5b76dd49bc31b"]');?>
+
+    <a href="http://www.kolopar.xyz/shop" class="button nav_buttons_item_link">Сброс</a>
 <!--    [searchandfilter id="wpf_5b76dd49bc31b"]-->
 <!--    [searchandfilter id="wpf_5b76d56e36d0c"]-->
 <!--    [searchandfilter id="%d0%ba%d0%be%d0%bc%d1%83"]-->

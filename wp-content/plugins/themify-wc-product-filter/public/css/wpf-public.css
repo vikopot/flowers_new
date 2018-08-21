@@ -181,7 +181,7 @@
     padding: 0;    
 }
 .wpf_items_wrapper .wpf_item ul li {
-	display: inline-block;
+	display: table;
 }
 .wpf_item li {
     margin: 0 0 .8em;
@@ -365,7 +365,7 @@ PRICE Tooltip
     margin: 2.5em .0 .8em 0;
 }
 .wpf_slider.ui-slider .ui-widget-header{
-    background: #975dc3;
+    background: #b48c4b;
     border: none;
 }
 .wpf_slider.ui-slider .ui-slider-handle{

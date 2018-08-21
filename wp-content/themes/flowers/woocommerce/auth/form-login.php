@@ -52,3 +52,4 @@ do_action( 'woocommerce_auth_page_header' ); ?>
 </form>
 
 <?php do_action( 'woocommerce_auth_page_footer' ); ?>
+<?=do_shortcode('[wppb-register]');?>

@@ -181,13 +181,18 @@ function my_enqueue_stuff() {
 
 	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+/*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
+
 //    wp_enqueue_script('flowers-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 //    wp_enqueue_script( 'flowers-bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js');
+//
+//
+/*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
+//    wp_enqueue_style('flowers-main_css',get_template_directory_uri(). '/layouts/6b6cf80f85e258f63952c28df862c487.css');
 
 
-    wp_enqueue_style('flowers-main_css',get_template_directory_uri(). '/layouts/6b6cf80f85e258f63952c28df862c487.css');
-
-    wp_enqueue_script('flowers-second_js', get_template_directory_uri() . '/js/1e2d507c5610e2750f2f3a3c173602ca.js');//atr - data-minify="1"
+//    wp_enqueue_script('flowers-second_js', get_template_directory_uri() . '/js/1e2d507c5610e2750f2f3a3c173602ca.js');//atr - data-minify="1"
 
 
 
@@ -219,7 +224,7 @@ function my_enqueue_stuff() {
 
     if( is_account_page() )
     {
-        wp_deregister_style('flowers-bootstrap');
+//        wp_deregister_style('flowers-bootstrap');
     }
 
 
@@ -325,3 +330,45 @@ function woocommerce_custom_sale_text($text, $post, $_product)
 //    global $template;
 //    echo basename($template);
 //}
+//
+
+add_filter( 'wp_nav_menu_items', 'add_loginout_link', 10, 2 );
+
+function add_loginout_link( $items, $args ) {
+
+    if (is_user_logged_in() ) {
+
+        $items .= '<li><a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Log Out</a></li>';
+
+    }
+
+    elseif (!is_user_logged_in() ) {
+
+        $items .= '<li><a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">Log In</a></li>';
+
+    }
+
+    return $items;
+
+}
+
+//echo do_shortcode('[logout]');
+//отключение купона на странице оформление заказа(уведомление "у вас есть купон?")
+remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
+// hide coupon field on cart page
+function hide_coupon_field_on_cart( $enabled ) {
+    if ( is_cart() ) {
+        $enabled = false;
+    }
+    return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_cart' );
+// hide coupon field on checkout page
+function hide_coupon_field_on_checkout( $enabled ) {
+    if ( is_checkout() ) {
+        $enabled = false;
+    }
+    return $enabled;
+}
+add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_checkout' );

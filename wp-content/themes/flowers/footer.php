@@ -91,7 +91,7 @@
                                     </div>
                                 </aside>
                             </div>
-                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3" id="bl6">
+                            <div class="sidebar footer-sidebar col-md-3 col-sm-6 col-lg-3" >
                                 <aside id="text-2" class="widget-title-s-font widget widget_text">
                                     <h4 class="widget-title"><span>Контакты</span></h4>
                                     <div class="textwidget">
@@ -144,7 +144,7 @@
                         </div>
                         <div class="col-md-6 sidebar text-right">
                             <aside id="handmade-payment-gate-2" class="widget widget-payment-gate">
-                                <ul class="payment-gate">
+                                <ul class="payment-gate" id="bl6">
                                     <li> <a target="_blank" href="http://www.mastercard.com" title="Master card"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/master_card.jpg" alt="Master card" /> </a></li>
                                     <li> <a target="_blank" href="http://www.visa.com" title="Visa"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/visa.jpg" alt="Visa" /> </a></li>
                                     <li> <a target="_blank" href="http://www.paypal.com" title="Paypal"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/paypal.jpg" alt="Paypal" /> </a></li>

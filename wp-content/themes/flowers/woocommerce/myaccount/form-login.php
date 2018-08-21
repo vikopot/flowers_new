@@ -27,9 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
-<div class="u-columns col2-set" id="customer_login">
+<div class="u-columns col2-set row" id="customer_login">
 
-	<div class="u-column1 col-1">
+	<div class="u-column1 col-lg-6 col-md-6 col-sm-12">
 
 <?php endif; ?>
 
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 
-	<div class="u-column2 col-2">
+	<div class="u-column2 col-lg-6 col-md-6 col-sm-12">
 
 		<h2><?php esc_html_e( 'Register', 'woocommerce' ); ?></h2>
 
@@ -111,9 +111,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</form>
 
+<!--        --><?//=do_shortcode('[wppb-register]');?>
+
 	</div>
 
 </div>
 <?php endif; ?>
 
-<?php do_action( 'woocommerce_after_customer_login_form' ); ?>
+

@@ -3,6 +3,7 @@
 $count_products = 8;
 ?>
 
+<?php echo do_shortcode('[aws_search_form]'); ?>
 
 <? get_header(); ?>
          <div id="wrapper-content" class="clearfix">
@@ -85,9 +86,11 @@ $count_products = 8;
        box-shadow: none !important;
    }
    article.carousel-caption{
-      background-image: url('<?php echo get_bloginfo('template_url');?>/img/aside8.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
+      /*background-image: url('<?php //echo get_bloginfo('template_url');?>/img/aside8.png');*/
+      /*background-size: 100% 100%;*/
+      /*background-repeat: no-repeat;*/
+       background: #fff;
+       padding: 5px;
    }
 
 
@@ -101,6 +104,26 @@ $count_products = 8;
        background-size: cover;
    }
 
+   .slide_content{
+       border: 1px solid #b78933;
+       /*padding: 5px;*/
+       padding: 5% 0px;
+   }
+   .carousel-caption.hidden-md-up button{
+       display: block;
+   }
+   @media(max-width: 479px){
+       .wpb_wrapper .handmade-banner.style2.right{
+           height: 211px;
+       }
+/*рамка*/
+   }
+   
+   @media(min-width:768px){
+       .carousel-caption.hidden-md-up button{
+           display: none;
+       }
+   }
    @media(max-width:1024px){
        .carousel-item{
            height: 45vh;
@@ -131,12 +154,14 @@ $count_products = 8;
 
 <!--     <img class="d-block w-100" src="https://static.tildacdn.com/tild6139-3838-4161-b633-643461643932/11.png" alt="Third slide">-->
       <article class="carousel-caption d-none d-md-block">
-       <h5>Добро пожаловать в Love Roses</h5>
-       <!--<p>Добро пожаловать в Flowers Boutique</p>-->
-      <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
+          <div class="slide_content">
+               <h5>Добро пожаловать в Love Roses</h5>
+               <!--<p>Добро пожаловать в Flowers Boutique</p>-->
+              <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+          </div>
      </article> <!-- carousel-caption .// -->
       <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
-         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Подробнее</button>
+         <button type="button" class="btn slider_btn" style="    margin: 5px;">Подробнее</button>
       </article>
     </div>
 <!--      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">-->
@@ -148,10 +173,12 @@ $count_products = 8;
     <div class="carousel-item" style="background-image: url(<?=get_bloginfo('template_url');?>/img/slide1.jpg)">
 <!--      <img class="d-block w-100" src="--><?php //echo get_bloginfo('template_url');?><!--/img/slide1.jpg" alt="Second slide">-->
       <article class="carousel-caption d-md-block">
-       <h5>Third slide label</h5>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt</p>
-      <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+          <div class="slide_content">
+               <h5>Third slide label</h5>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt</p>
+              <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+          </div>
      </article> <!-- carousel-caption .// -->
      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
          <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
@@ -160,10 +187,12 @@ $count_products = 8;
     <div class="carousel-item" style="background-image: url(<?=get_bloginfo('template_url');?>/img/slide2.JPG)">
 <!--      <img class="d-block w-100" src="--><?php //echo get_bloginfo('template_url');?><!--/img/slide2.JPG" alt="Third slide">-->
       <article class="carousel-caption d-md-block">
-       <h5>Third slide label</h5>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt</p>
-      <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+          <div class="slide_content">
+               <h5>Third slide label</h5>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt</p>
+              <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+          </div>
      </article> <!-- carousel-caption .// -->
      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
          <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>

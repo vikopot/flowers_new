@@ -70,7 +70,7 @@ echo basename($template);
 
 
     <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
     <!-- slim->min -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -172,7 +172,102 @@ echo basename($template);
     <noscript>
         <style type="text/css">.wpb_animate_when_almost_visible{opacity:1}</style>
     </noscript>
+<!--    для фильтров-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        /* Checkbox Icons */
 
+        .wpf_form.wpf_submit_on_change .wpf_items_group label {
+            position: relative;
+            padding-left: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            /*color: #fff;*/
+            /*padding: 16px 28px 0 0;*/
+        }
+
+        .wpf_form.wpf_submit_on_change .wpf_items_group label:before,
+        .wpf_form.wpf_submit_on_change .wpf_items_group label:after {
+            font-family: FontAwesome;
+            font-size: 25px;
+            /*absolutely positioned*/
+            position: absolute; top: 0; left: -49px; right: 10px;
+            font-weight: 100;
+
+            -webkit-transition: all 0.50s;
+            -moz-transition: all 0.50s;
+            -o-transition: all 0.50s;
+            transition: all 0.50s;
+
+        }
+
+        .wpf_form.wpf_submit_on_change .wpf_items_group label:before {
+            content: '\f096'; /*checkbox unchecked */
+        }
+        .wpf_form.wpf_submit_on_change .wpf_items_group label:after {
+            content: '\f00c'; /*checkbox checked*/
+            max-width: 0;
+            overflow: hidden;
+            opacity: 0.5;
+            font-size: 23px;
+            top: -2px;
+            left: -49px;
+            color: #b78933;
+
+            -webkit-transition: all 0.50s;
+            -moz-transition: all 0.50s;
+            -o-transition: all 0.50s;
+            transition: all 0.50s;
+        }
+
+        /* Hide the Ordinary Checkbox */
+        .wpf_form.wpf_submit_on_change .wpf_items_group input[type="checkbox"] {
+            display: none;
+        }
+
+        /* Animating the Checkbox Icon */
+        .wpf_form.wpf_submit_on_change .wpf_items_group input[type="checkbox"]:checked + label::after {
+            margin-right: 90px;
+            max-width: 25px;
+            opacity: 1;
+            width: 25px;
+        }
+
+        /*ползунок цены*/
+        .wpf_slider.ui-slider .ui-widget-header{
+            height: 200%;
+            background: #fce2e5;
+        }
+
+
+        /*wc pagination*/
+        .woocommerce-pagination{
+            width: 100%;
+            margin: 50px 0px;
+        }
+
+        .woocommerce-pagination ul li a{
+            color: #b78933;
+        }
+
+        /*search*/
+        #search_popup_wrapper .search-popup-inner > button{
+            border-color: #b78933;
+            color: #b78933;
+        }
+        .dialog.dialog--open button[data-dialog-close]{
+            background-color: #b78933;
+            display: flex;
+            justify-content: center;
+        }
+
+        @font-face{
+            font-family: WooCommerce;
+            src:url(<?php echo get_bloginfo('template_url');?>/fonts/WooCommerce.ttf);
+
+        }
+    </style>
+    <!--   end для фильтров-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/Pe-icon-7-stroke.css">
@@ -269,7 +364,18 @@ echo basename($template);
                         </div>
                     </aside>
                     <aside id="g5plus-my-account-2" class="separate-left widget widget-my-account">
-                    	<a href="/handmade/my-account/">Вход</a>
+<!--                    	<a href="/handmade/my-account/">Вход</a>-->
+                        <?
+                        if (is_user_logged_in() )
+                        {
+                            echo '<a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Выход</a>';
+                        }
+
+                        elseif (!is_user_logged_in() )
+                        {
+                            echo '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">Вход</a>';
+                        }
+                        ?>
                     </aside>
 
                 </div>
@@ -339,13 +445,14 @@ echo basename($template);
                         </button>
                     </form> -->
 
-                    <form role="search" method="get" class="search-form-menu-mobile" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                
-		                <input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?> search-input" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-		                <button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"  class="btn-search"><i class="fas fa-search"></i></button>
-
-		                <input type="hidden" name="post_type" value="product" />
-		            </form>
+<!--                    <form role="search" method="get" class="search-form-menu-mobile" action="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!--                -->
+<!--		                <input type="search" id="woocommerce-product-search-field---><?php //echo isset( $index ) ? absint( $index ) : 0; ?><!-- search-input" class="search-field" placeholder="--><?php //echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?><!--" value="--><?php //echo get_search_query(); ?><!--" name="s" />-->
+<!--		                <button type="submit" value="--><?php //echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?><!--"  class="btn-search"><i class="fas fa-search"></i></button>-->
+<!---->
+<!--		                <input type="hidden" name="post_type" value="product" />-->
+<!--		            </form>-->
+                    <?php echo do_shortcode('[aws_search_form]'); ?>
 					
 
                     <ul id="menu-main-menu" class="nav-menu-mobile x-nav-menu x-nav-menu_main-menu x-animate-slide-up" data-breakpoint="991">
@@ -385,6 +492,7 @@ echo basename($template);
 						    var dest = $(elementClick).offset().top;
 						    // console.log(elementClick);
 						    var offset_to_target_block = 100;
+						    var destination;
 
 						    // if(мобилка){
 						    // 	$('.toggle-icon-wrapper[data-drop]').removeClass('in');
@@ -412,13 +520,13 @@ echo basename($template);
 						    if( elementClick == '#bl6')
 						    {
 
-						    	 dest = $(document).height();
+                                dest = $(document).height();
 						    	offset_to_target_block = 0;
                                 console.log('if true');
 						    }
 
                             console.log('do'+dest);
-						    destination = dest + offset_to_target_block;
+						    destination = dest - offset_to_target_block;
  
 						    jQuery("html:not(:animated),body:not(:animated)").animate({
 						      scrollTop: destination
@@ -703,13 +811,14 @@ echo basename($template);
 
 
 
-                <form role="search" method="get" class="search-popup-inner" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                
-                <input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-                <button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'woocommerce' ); ?></button>
-
-                <input type="hidden" name="post_type" value="product" />
-            </form>
+<!--                <form role="search" method="get" class="search-popup-inner" action="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!--                -->
+<!--                <input type="search" id="woocommerce-product-search-field---><?php //echo isset( $index ) ? absint( $index ) : 0; ?><!--" class="search-field" placeholder="--><?php //echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?><!--" value="--><?php //echo get_search_query(); ?><!--" name="s" />-->
+<!--                <button type="submit" value="--><?php //echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?><!--">--><?php //echo esc_html_x( 'Search', 'submit button', 'woocommerce' ); ?><!--</button>-->
+<!---->
+<!--                <input type="hidden" name="post_type" value="product" />-->
+<!--            </form>-->
+                <?php echo do_shortcode('[aws_search_form]'); ?>
 
                 <div><button class="action" data-dialog-close="close" type="button"><i class="fas fa-close"></i></button></div>
             </div>

@@ -21,3 +21,7 @@ div.cupon{
 .wc-proceed-to-checkout .checkout-button.button{
 
 }
+
+.cart-discount.coupon-first-order-discount a.woocommerce-remove-coupon{
+	color: #7a7a7a;
+}
