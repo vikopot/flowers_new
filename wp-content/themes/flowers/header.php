@@ -71,6 +71,17 @@ echo basename($template);
 
     <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 <!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">-->
+    <?php
+
+    if( is_checkout() )
+    {
+        $link = '';
+    }
+    else{
+        $link = '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">';
+    }
+    echo $link;
+    ?>
     <!-- slim->min -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -453,36 +464,36 @@ echo basename($template);
 <!--		                <input type="hidden" name="post_type" value="product" />-->
 <!--		            </form>-->
                     <?php echo do_shortcode('[aws_search_form]'); ?>
-					
+
 
                     <ul id="menu-main-menu" class="nav-menu-mobile x-nav-menu x-nav-menu_main-menu x-animate-slide-up" data-breakpoint="991">
                         <li id="menu-item-mobile-2294" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Главная</span></a>
-                            
+
                         </li>
                         <li id="menu-item-mobile-2295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?=$home_url_link; ?>#bl2" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Хиты Продаж</span></a>
-                            
+
                         </li>
                         <li id="menu-item-mobile-2497" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?=$home_url_link; ?>#bl3" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Акции и Скидки</span></a>
-                            
+
                         </li>
                         <li id="menu-item-mobile-2440" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children x-menu-item x-sub-menu-standard">
                             <a href="<?=$home_url_link; ?>#bl4" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Доставка</span></a>
-                          
+
                         </li>
                         <li id="menu-item-mobile-2422" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children x-menu-item x-pos-full x-sub-menu-multi-column">
                             <a href="<?=$home_url_link; ?>#bl5" class="x-menu-a-text scrollto_link"><span class="x-menu-text">О Нас</span></a>
-                           
+
                         </li>
                         <li id="menu-item-mobile-2524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children x-menu-item x-pos-full x-sub-menu-multi-column">
                             <a href="<?=$home_url_link; ?>#bl6" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Контакты</span></a>
-                            
+
                         </li>
                         <li id="menu-item-mobile-2478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children x-menu-item x-pos-full x-item-image x-image-layout x-image-layout-above x-sub-menu-multi-column">
                             <a href="<?=$home_url_link; ?>#bl7" class="x-menu-a-text scrollto_link"><span class="x-menu-text">Отзывы</span></a>
-                           
+
                         </li>
                     </ul>
                     <script>
@@ -527,11 +538,11 @@ echo basename($template);
 
                             console.log('do'+dest);
 						    destination = dest - offset_to_target_block;
- 
+
 						    jQuery("html:not(:animated),body:not(:animated)").animate({
 						      scrollTop: destination
 						    }, 800);
-						    
+
 						    // alert(0);
 						    return false;
 						  });
@@ -568,7 +579,7 @@ echo basename($template);
                             <div class="contact-info"> <i class="fas fa-phone"></i> <?=$flowers_theme_opt['header-phone'];?></div>
                         </div>
 
-                       
+
 
                         <!-- <div class="shopping-cart-wrapper header-customize-item with-price"> -->
                             <!-- <div class="widget_shopping_cart_content"> -->
@@ -613,6 +624,12 @@ echo basename($template);
                                 -o-transition-timing-function: cubic-bezier(0.11, 0.76, 0.24, 0.93);
                                 transition-timing-function: cubic-bezier(0.11, 0.76, 0.24, 0.93);
                             }
+
+                            /*mob menu 777*/
+                        .container.header-mobile-wrapper .header-mobile-inner .header-mobile-nav.menu-drop-fly form.aws-search-form input{
+                            background: #383838;
+                            color: white;
+                        }
                         </style>
 
                         <div class="shopping-cart-wrapper header-customize-item with-price">
@@ -628,7 +645,7 @@ echo basename($template);
                                     <?php echo WC()->cart->get_cart_subtotal(); ?>
                                 </div>
                             <div class="cart_list_wrapper">
-                                
+
 
                                 <?php if ( ! WC()->cart->is_empty() ) : ?>
 
@@ -647,7 +664,7 @@ echo basename($template);
                                                     $product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
                                                     ?>
                                                     <li>
-                                                       
+
                                                         <?php if ( empty( $product_permalink ) ) : ?>
 
                                                             <div class="cart-left">
@@ -671,10 +688,10 @@ echo basename($template);
                                                                 <?php echo $product_name .  '&nbsp;'; ?>
                                                             </a>
                                                             <?php echo wc_get_formatted_cart_item_data( $cart_item ); ?>
-                                                            
+
                                                             <!-- qty -->
                                                             <?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
-                                                            
+
                                                             <!-- remove -->
                                                              <?php
                                                             echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
@@ -698,7 +715,7 @@ echo basename($template);
 
                                     <div class="cart-total">
                                     	<p class="total"><strong><?php #_e( 'Subtotal', 'woocommerce' ); ?>Итого:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
-                                    
+
 
 	                                    <?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
@@ -712,10 +729,10 @@ echo basename($template);
                                                         <h4>Корзина пуста</h4>
                                                         <p>В вашей корзине нет товаров</p>
                                                     </li>
-                                                
+
                                             <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px; display: block;"><div class="ps-scrollbar-x" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; display: block;"><div class="ps-scrollbar-y" style="top: 0px; height: 0px;"></div></div></ul><!-- end product list -->
 
-                                            
+
 <!--                                            </div>-->
 
                                 <?php endif; ?>
@@ -724,7 +741,7 @@ echo basename($template);
                                 </div>
                             </div>
                         </div>
-                                
+
 
                     </div>
                 </div>
@@ -803,7 +820,7 @@ echo basename($template);
             </div>
             <div class="dialog-inner">
                 <h2>Введите свой запрос</h2>
-                
+
                 <!-- <form method="get" action="<?php home_url('/');?>" class="search-popup-inner">
                     <input type="text" name="s" placeholder="Поиск...">
                     <button type="submit">Поиск</button>

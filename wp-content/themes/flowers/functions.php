@@ -180,7 +180,7 @@ function my_enqueue_stuff() {
 
 
 	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+//    wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 
 /*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
 
@@ -219,7 +219,7 @@ function my_enqueue_stuff() {
 
   if ( is_checkout() ) {
     wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/checkout.css');
-    wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
+//    wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
   }
 
     if( is_account_page() )
@@ -250,7 +250,7 @@ remove_action('wp_head', 'wp_generator');
 
 
 
-// function custom_mini_cart() { 
+// function custom_mini_cart() {
 //     return '<div class="shopping-cart-wrapper header-customize-item with-price">
 //     <div class="widget_shopping_cart_content">
 //                        <div class="widget_shopping_cart_icon">
@@ -266,12 +266,12 @@ remove_action('wp_head', 'wp_generator');
 //                         //. woocommerce_mini_cart()
 //                          </div>
 //                          </div>';
-                         
+
 
 //       }
 //        add_shortcode( 'custom-techno-mini-cart', 'custom_mini_cart' );
 
-                       
+
 /*ajax cart*/
 add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
 

@@ -72,7 +72,7 @@ if ( woocommerce_product_loop() ) {
 
 
 
-	<div class="product-listing woocommerce clearfix col-8 row">
+	<div class="product-listing woocommerce clearfix col-lg-8 col-md-8 col-sm-12 row">
 	<?
 
 	if ( wc_get_loop_prop( 'total' ) ) {

@@ -43,6 +43,7 @@ $count_products = 8;
    .carousel-item p{
       font-family: 'gothic';
       color: #898383;
+       font-size: 16px;
    }
 @media(min-width:1200px){
    /*.carousel-item img{*/
@@ -51,6 +52,7 @@ $count_products = 8;
  }
    
    .carousel-item button.slider_btn{
+       font-size: 16px;
        padding: 10px 30px;
        /*color: #b78933;
        background:  #fce2e5 ;*/

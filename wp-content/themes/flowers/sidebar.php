@@ -11,8 +11,20 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 ?>
-
-<aside id="secondary" class="widget-area col-3">
+<style>
+    @media screen and (max-width: 768px){
+        aside#secondary{
+            padding: 0px 30px;
+        }
+        .reset_filter_btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+</style>
+<aside id="secondary" class="widget-area col-lg-3 col-md-3 col-sm-12">
 <!--    price-->
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
     <div class="row">
@@ -23,7 +35,10 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
     <?=do_shortcode('[searchandfilter id="wpf_5b76d6f04b6f0"]');?>
     <?=do_shortcode('[searchandfilter id="wpf_5b76dd49bc31b"]');?>
 
-    <a href="http://www.kolopar.xyz/shop" class="button nav_buttons_item_link">Сброс</a>
+    <div class="row reset_filter_btn">
+        <a href="http://www.kolopar.xyz/shop" class="button nav_buttons_item_link">Сброс</a>
+    </div>
+
 <!--    [searchandfilter id="wpf_5b76dd49bc31b"]-->
 <!--    [searchandfilter id="wpf_5b76d56e36d0c"]-->
 <!--    [searchandfilter id="%d0%ba%d0%be%d0%bc%d1%83"]-->

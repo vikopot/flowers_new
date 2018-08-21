@@ -91,26 +91,42 @@ $name = $current_user->user_login;
         <a href="<?=wp_logout_url( get_permalink( woocommerce_get_page_id( 'shop' ) ) ) ?>" class="change-acc_link"><p>сменить аккаунт</p></a>
     </div>
 </div>
+<style>
+/*    */
+    /*table.shop_table_responsive thead{*/
+        /*display: none !important;*/
+
+    /*}*/
+    /*.woocommerce table.shop_table td{*/
+        /*display: table-row-group;*/
+    /*}*/
+    /*.alg-wc-wl-view-table td, .alg-wc-wl-view-table tr{*/
+        /*display: block;*/
+    /*}*/
+</style>
+<script>
+    $('div.tumble').toggleClass('bounce');
+</script>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="row col-12">
                 <h3>Избранное:</h3>
 
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><h4>1</h4></div>
-                    <div class="item"><h4>2</h4></div>
-                    <div class="item"><h4>3</h4></div>
-                    <div class="item"><h4>4</h4></div>
-                    <div class="item"><h4>5</h4></div>
-                    <div class="item"><h4>6</h4></div>
-                    <div class="item"><h4>7</h4></div>
-                    <div class="item"><h4>8</h4></div>
-                    <div class="item"><h4>9</h4></div>
-                    <div class="item"><h4>10</h4></div>
-                    <div class="item"><h4>11</h4></div>
-                    <div class="item"><h4>12</h4></div>
-                </div>
+<!--                <div class="owl-carousel owl-theme">-->
+<!--                    <div class="item"><h4>1</h4></div>-->
+<!--                    <div class="item"><h4>2</h4></div>-->
+<!--                    <div class="item"><h4>3</h4></div>-->
+<!--                    <div class="item"><h4>4</h4></div>-->
+<!--                    <div class="item"><h4>5</h4></div>-->
+<!--                    <div class="item"><h4>6</h4></div>-->
+<!--                    <div class="item"><h4>7</h4></div>-->
+<!--                    <div class="item"><h4>8</h4></div>-->
+<!--                    <div class="item"><h4>9</h4></div>-->
+<!--                    <div class="item"><h4>10</h4></div>-->
+<!--                    <div class="item"><h4>11</h4></div>-->
+<!--                    <div class="item"><h4>12</h4></div>-->
+<!--                </div>-->
 
                <?=do_shortcode('[alg_wc_wl]');?>
 

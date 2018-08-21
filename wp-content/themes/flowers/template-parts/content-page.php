@@ -8,7 +8,11 @@
  */
 
 ?>
-
+<style>
+    .hentry {
+        margin: auto;
+    }
+</style>
 <article id="post-<?php the_ID(); ?>" <?php post_class('container'); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
