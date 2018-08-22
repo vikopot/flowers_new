@@ -42,7 +42,7 @@ global $flowers_theme_opt;
 //var_dump(is_ajax());
 ?>
 
-<?php global $template; echo basename($template); ?>
+<?php //global $template; echo basename($template); ?>
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -294,7 +294,7 @@ global $flowers_theme_opt;
                                     <span class="total">0</span>
                                 </div>
                                 <div class="sub-total-text">
-                                    <!--                                	<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₴</span>0.00</span></div>-->
+                                    <!--                                	<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">?</span>0.00</span></div>-->
                                     <?php echo WC()->cart->get_cart_subtotal(); ?>
                                     <div class="cart_list_wrapper">
                                         <ul class="cart_list product_list_widget ">
@@ -486,7 +486,7 @@ global $flowers_theme_opt;
                                     </span>
                                 </div>
                                 <div class="sub-total-text">
-                                    <!--                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₴</span></span>-->
+                                    <!--                                    <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">?</span></span>-->
                                     <?php echo WC()->cart->get_cart_subtotal(); ?>
                                 </div>
                                 <div class="cart_list_wrapper">
