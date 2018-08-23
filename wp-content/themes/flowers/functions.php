@@ -8,78 +8,78 @@
  */
 
 if ( ! function_exists( 'flowers_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
-	function flowers_setup() {
-		/*
-		 * Make theme available for translation.
-		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on flowers, use a find and replace
-		 * to change 'flowers' to the name of your theme in all the template files.
-		 */
-		load_theme_textdomain( 'flowers', get_template_directory() . '/languages' );
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
+    function flowers_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on flowers, use a find and replace
+         * to change 'flowers' to the name of your theme in all the template files.
+         */
+        load_theme_textdomain( 'flowers', get_template_directory() . '/languages' );
 
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-		/*
-		 * Let WordPress manage the document title.
-		 * By adding theme support, we declare that this theme does not use a
-		 * hard-coded <title> tag in the document head, and expect WordPress to
-		 * provide it for us.
-		 */
-		add_theme_support( 'title-tag' );
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
 
-		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
-		add_theme_support( 'post-thumbnails' );
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'flowers' ),
-		) );
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menus( array(
+            'menu-1' => esc_html__( 'Primary', 'flowers' ),
+        ) );
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'flowers_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+        // Set up the WordPress core custom background feature.
+        add_theme_support( 'custom-background', apply_filters( 'flowers_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
 
-		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+        // Add theme support for selective refresh for widgets.
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
-	}
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ) );
+    }
 endif;
 add_action( 'after_setup_theme', 'flowers_setup' );
 
@@ -91,10 +91,10 @@ add_action( 'after_setup_theme', 'flowers_setup' );
  * @global int $content_width
  */
 function flowers_content_width() {
-	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
-	$GLOBALS['content_width'] = apply_filters( 'flowers_content_width', 640 );
+    // This variable is intended to be overruled from themes.
+    // Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+    // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+    $GLOBALS['content_width'] = apply_filters( 'flowers_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'flowers_content_width', 0 );
 
@@ -104,15 +104,15 @@ add_action( 'after_setup_theme', 'flowers_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function flowers_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'flowers' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'flowers' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+    register_sidebar( array(
+        'name'          => esc_html__( 'Sidebar', 'flowers' ),
+        'id'            => 'sidebar-1',
+        'description'   => esc_html__( 'Add widgets here.', 'flowers' ),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'flowers_widgets_init' );
 
@@ -120,15 +120,15 @@ add_action( 'widgets_init', 'flowers_widgets_init' );
  * Enqueue scripts and styles.
  */
 function flowers_scripts() {
-	wp_enqueue_style( 'flowers-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'flowers-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'flowers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'flowers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'flowers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( 'flowers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'flowers_scripts' );
 
@@ -162,14 +162,14 @@ require get_template_directory() . '/inc/sample-config.php';
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+    require get_template_directory() . '/inc/jetpack.php';
 }
 
 /**
  * Load WooCommerce compatibility file.
  */
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
+    require get_template_directory() . '/inc/woocommerce.php';
 }
 
 
@@ -179,16 +179,16 @@ function my_enqueue_stuff() {
 
 
 
-	// <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-//    wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+    // <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    wp_enqueue_style( 'flowers-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
 
-/*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
+    /*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
 
 //    wp_enqueue_script('flowers-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
 //    wp_enqueue_script( 'flowers-bootstrap_js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js');
 //
 //
-/*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
+    /*    <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />*/
 //    wp_enqueue_style('flowers-main_css',get_template_directory_uri(). '/layouts/6b6cf80f85e258f63952c28df862c487.css');
 
 
@@ -201,30 +201,32 @@ function my_enqueue_stuff() {
     // <script charset="UTF-8" src="//cdn.sendpulse.com/js/push/14aa881f8080b6a5a1fa5c698ced7c61_0.js" async></script>
     wp_enqueue_script( 'flowers-push', '//cdn.sendpulse.com/js/push/14aa881f8080b6a5a1fa5c698ced7c61_0.js');
 
-  if ( is_product() ) {
-    // wp_enqueue_style( 'flowers-single_product', 'http://themes.g5plus.net/handmade/wp-content/themes/handmade/g5plus-framework/xmenu/assets/css/style.css');
-    wp_enqueue_style( 'flowers-single_product_css', get_template_directory_uri() . '/layouts/product.css');
-      wp_enqueue_style( 'carousel-css', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
-      wp_enqueue_style( 'carousel-css_theme_default', get_template_directory_uri() . '/owlcarousel/owl.theme.default.min.css');
-      wp_enqueue_script( 'carousel_js', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js');
-  } else {
-    /** Call regular enqueue */
-  }
+
+    if ( is_product() ) {
+        // wp_enqueue_style( 'flowers-single_product', 'http://themes.g5plus.net/handmade/wp-content/themes/handmade/g5plus-framework/xmenu/assets/css/style.css');
+        wp_enqueue_style( 'flowers-single_product_css', get_template_directory_uri() . '/layouts/product.css');
+        wp_enqueue_style( 'carousel-css', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.css');
+        wp_enqueue_style( 'carousel-css_theme_default', get_template_directory_uri() . '/owlcarousel/owl.theme.default.min.css');
+        wp_enqueue_script( 'carousel_js', get_template_directory_uri() . '/owlcarousel/owl.carousel.min.js');
+        wp_deregister_style('flowers-bootstrap');
+    } else {
+        /** Call regular enqueue */
+    }
 
 
-  if ( is_cart() ) {
-    wp_enqueue_style( 'flowers-cart', get_template_directory_uri() . '/layouts/cart.css');
-  }
+    if ( is_cart() ) {
+        wp_enqueue_style( 'flowers-cart', get_template_directory_uri() . '/layouts/cart.css');
+    }
 
 
-  if ( is_checkout() ) {
-    wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/checkout.css');
-//    wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
-  }
+    if ( is_checkout() ) {
+        wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/checkout.css');
+    wp_deregister_style('flowers-bootstrap');//конфликтует с классами wc
+    }
 
     if( is_account_page() )
     {
-//        wp_deregister_style('flowers-bootstrap');
+        wp_deregister_style('flowers-bootstrap');
     }
 
 
@@ -260,7 +262,7 @@ remove_action('wp_head', 'wp_generator');
 //                          '</span>
 //                            </div>
 //                            <div class="sub-total-text">
-//                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">₴</span>0.00</span>
+//                            <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">?</span>0.00</span>
 //                             </div>
 //                           <div class="cart_list_wrapper">
 //                         //. woocommerce_mini_cart()
@@ -372,3 +374,12 @@ function hide_coupon_field_on_checkout( $enabled ) {
     return $enabled;
 }
 add_filter( 'woocommerce_coupons_enabled', 'hide_coupon_field_on_checkout' );
+
+
+/**
+ * Remove password strength check.
+ */
+function iconic_remove_password_strength() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+}
+add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );

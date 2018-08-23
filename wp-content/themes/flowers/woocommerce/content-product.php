@@ -97,7 +97,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
          </div>
 
          <a class="product-link" <a="" href="<?php the_permalink();?>"></a>
-         <!--<div class="product-actions">
+         <div class="product-actions">
              <a data-toggle="tooltip" data-placement="top" title="" <a="" href="/handmade/product/yellow-pillow/?action=yith-woocompare-add-product&amp;id=1569" class="compare" data-product_id="1569" data-original-title="Compare">
             	<i class="fas fa-exchange-alt"></i>
             </a>
@@ -107,12 +107,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                	<a href="/handmade/home-02/?add_to_wishlist=1569" rel="nofollow" data-product-id="1569" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a>
                	<img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
                </div>
-               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;" data-original-title="" title=""> 
+               <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;" data-original-title="" title="">
                	<span class="feedback">Product added!</span>
                	<a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a>
                </div>
-               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none" data-original-title="" title=""> 
-               	<span class="feedback">The product is already in the wishlist!</span> 
+               <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none" data-original-title="" title="">
+               	<span class="feedback">The product is already in the wishlist!</span>
                	<a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a>
                </div>
                <div style="clear:both"></div>
@@ -125,7 +125,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
             	<a rel="nofollow" href="/handmade/home-02/?add-to-cart=1569" data-quantity="1" data-product_id="1569" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart">
             		<i class="fas fa-shopping-cart"></i> Add to cart</a>
-            		<? 
+            		<?
             		echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 										sprintf(
 											'<a href="%s" data-quantity="%s" class="%s" %s>%s</a>',
@@ -136,11 +136,11 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 											esc_html( $product->add_to_cart_text() )
 										),
 										$product,
-										$args 
+										$args
 									);
             		?>
             </div>
-         </div> -->
+         </div>
       </div>
       <div class="product-info">
          <!-- <div class="star-rating">

@@ -3,9 +3,10 @@
 $count_products = 8;
 ?>
 
-<?php echo do_shortcode('[aws_search_form]'); ?>
+<?php //echo do_shortcode('[aws_search_form]'); ?>
 
 <? get_header(); ?>
+
          <div id="wrapper-content" class="clearfix">
             <main class="site-content-page">
                <div class="site-content-page-inner ">
@@ -120,7 +121,12 @@ $count_products = 8;
        }
 /*рамка*/
    }
-   
+
+   @media(max-width:768px){
+       .carousel-caption{
+           bottom: 30px;
+       }
+   }
    @media(min-width:768px){
        .carousel-caption.hidden-md-up button{
            display: none;
@@ -141,6 +147,14 @@ $count_products = 8;
            /*height: 490px;*/
        /*}*/
    /*}*/
+
+
+   .carousel-indicators li{
+       width: 10px;
+       height: 10px;
+       background-color: #fff;
+   }
+
 
 </style>
 
@@ -407,7 +421,7 @@ $count_products = 8;
                                                    <div class="vc_tta-panels">
                                                       <div class="vc_tta-panel vc_active" id="birthday-gifts" data-vc-content=".vc_tta-panel-body">
                                                          <div class="vc_tta-panel-heading">
-                                                            <h4 class="vc_tta-panel-title"><a href="#birthday-gifts" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Цветы</span></a></h4>
+                                                            <h4 class="vc_tta-panel-title"><a href="#birthday-gifts" data-vc-accordion data-vc-container=".vc_tta-container" class="categ_hits_link"><span class="vc_tta-title-text">Цветы</span></a></h4>
                                                          </div>
                                                          <div class="vc_tta-panel-body">
                                                             <div class="woocommerce sc-product-wrap   no-title">
@@ -701,7 +715,7 @@ $count_products = 8;
                                                       </div>
                                                       <div class="vc_tta-panel" id="decor-art" data-vc-content=".vc_tta-panel-body">
                                                          <div class="vc_tta-panel-heading">
-                                                            <h4 class="vc_tta-panel-title"><a href="#decor-art" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Десерты</span></a></h4>
+                                                            <h4 class="vc_tta-panel-title"><a href="#decor-art" data-vc-accordion data-vc-container=".vc_tta-container" class="categ_hits_link"><span class="vc_tta-title-text">Десерты</span></a></h4>
                                                          </div>
                                                          <div class="vc_tta-panel-body">
                                                             <div class="woocommerce sc-product-wrap   no-title">
@@ -998,7 +1012,7 @@ $count_products = 8;
 <!-- 7878 -->
 <div class="vc_tta-panel" id="birthday-gifts1" data-vc-content=".vc_tta-panel-body">
                                                          <div class="vc_tta-panel-heading">
-                                                            <h4 class="vc_tta-panel-title"><a href="#birthday-gifts1" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Шары</span></a></h4>
+                                                            <h4 class="vc_tta-panel-title"><a href="#birthday-gifts1" data-vc-accordion data-vc-container=".vc_tta-container" class="categ_hits_link"><span class="vc_tta-title-text">Шары</span></a></h4>
                                                          </div>
                                                          <div class="vc_tta-panel-body">
                                                             <div class="woocommerce sc-product-wrap   no-title">
@@ -1295,7 +1309,7 @@ $count_products = 8;
 
                                                       <div class="vc_tta-panel" id="special-goods" data-vc-content=".vc_tta-panel-body">
                                                          <div class="vc_tta-panel-heading">
-                                                            <h4 class="vc_tta-panel-title"><a href="#special-goods" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Игрушки</span></a></h4>
+                                                            <h4 class="vc_tta-panel-title"><a href="#special-goods" data-vc-accordion data-vc-container=".vc_tta-container" class="categ_hits_link"><span class="vc_tta-title-text">Игрушки</span></a></h4>
                                                          </div>
                                                          <div class="vc_tta-panel-body">
                                                             <div class="woocommerce sc-product-wrap   no-title">
@@ -2298,4 +2312,13 @@ $count_products = 8;
                </div>
             </main>
          </div>
+    <script>
+        $('.categ_hits_link').click( function(){
+            // alert(0);
+           if(this.parentNode.parentNode.parentNode.classList.contains('vc_active')){
+               this.parentNode.parentNode.parentNode.classList.remove('vc_active');
+           }
+
+        } );
+    </script>
 <? get_footer(); ?>

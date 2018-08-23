@@ -15,7 +15,8 @@
   
 }
 
-.woocommerce div.product span.price{
+.woocommerce div.product span.price,
+.woocommerce div.product p.price{
     color: #5a5a5a;
 }
 .woocommerce div.product p.price ins{

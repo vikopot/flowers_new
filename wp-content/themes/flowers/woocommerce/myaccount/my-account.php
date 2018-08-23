@@ -46,10 +46,24 @@ $name = $current_user->user_login;
 ?>
 <!--111-->
 <style>
+    .alg-wc-wl-view-table.shop_table{
+        display: none;
+    }
+    .wpcf7{
+        width: 100%;
+    }
     .title_page{
         display: flex;
         justify-content: center;
+        margin-top: 15px;
         margin-bottom: 15px;
+    }
+    .title_page h1{
+        margin: 0px 10px;
+    }
+    .title_page .change-acc_link{
+        display: flex;
+        align-items: flex-end;
     }
 
     .nav_buttons{
@@ -75,13 +89,34 @@ $name = $current_user->user_login;
     }
    .commit-content{
        padding: 10px;
-       margin: 10px 0px;
+       margin: 12px 0px;
+       /*width: 100%;*/
+       font-size: 16px;
+       resize: none;
+       height: 215px;
    }
    .commit-content_btn{
 
    }
     div.wpcf7-mail-sent-ok{
         border: 2px solid #fce2e5;
+    }
+
+    .owl-item .item{
+        text-align: center;
+    }
+    .owl-item .item .product-thumbnail {
+        height: 130px;
+    }
+
+    .owl-item .item:hover{
+        border: 1px solid #fce2e5;
+    }
+    .owl-item .item .product-name a{
+        color: #000;
+    }
+    .owl-item .item .product-name a:hover{
+        color: #000;
     }
 </style>
 <div class="container">
@@ -105,7 +140,7 @@ $name = $current_user->user_login;
     /*}*/
 </style>
 <script>
-    $('div.tumble').toggleClass('bounce');
+    // $('div.tumble').toggleClass('bounce');
 </script>
 <div class="container">
     <div class="row">

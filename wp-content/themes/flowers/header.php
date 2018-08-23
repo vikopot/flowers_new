@@ -246,7 +246,17 @@ global $flowers_theme_opt;
                         </div>
                     </aside>
                     <aside id="g5plus-my-account-2" class="separate-left widget widget-my-account">
-                        <a href="/handmade/my-account/">Вход</a>
+<!--                        <a href="/handmade/my-account/">Вход</a>-->
+                        <?
+                        if (is_user_logged_in() )
+                        {
+                            echo '<a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Выход</a>';
+                        }
+                        elseif (!is_user_logged_in() )
+                        {
+                            echo '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">Вход</a>';
+                        }
+                        ?>
                     </aside>
 
                 </div>
@@ -316,13 +326,14 @@ global $flowers_theme_opt;
                         </button>
                     </form> -->
 
-                        <form role="search" method="get" class="search-form-menu-mobile" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-
-                            <input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?> search-input" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-                            <button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"  class="btn-search"><i class="fas fa-search"></i></button>
-
-                            <input type="hidden" name="post_type" value="product" />
-                        </form>
+<!--                        <form role="search" method="get" class="search-form-menu-mobile" action="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!---->
+<!--                            <input type="search" id="woocommerce-product-search-field---><?php //echo isset( $index ) ? absint( $index ) : 0; ?><!-- search-input" class="search-field" placeholder="--><?php //echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?><!--" value="--><?php //echo get_search_query(); ?><!--" name="s" />-->
+<!--                            <button type="submit" value="--><?php //echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?><!--"  class="btn-search"><i class="fas fa-search"></i></button>-->
+<!---->
+<!--                            <input type="hidden" name="post_type" value="product" />-->
+<!--                        </form>-->
+                        <?php echo do_shortcode('[aws_search_form]'); ?>
 
 
                         <ul id="menu-main-menu" class="nav-menu-mobile x-nav-menu x-nav-menu_main-menu x-animate-slide-up" data-breakpoint="991">
@@ -362,26 +373,8 @@ global $flowers_theme_opt;
                                     var dest = $(elementClick).offset().top;
                                     // console.log(elementClick);
                                     var offset_to_target_block = 100;
-                                    // if(мобилка){
-                                    // 	$('.toggle-icon-wrapper[data-drop]').removeClass('in');
-                                    // }
-                                    // if (window.matchMedia('(max-width: 991px)').matches)
-                                    // {
-                                    //     // $(body).removeClass('menu-mobile-in');
-                                    //     // $('#nav-menu-mobile').removeClass('in');
-                                    //     $('.toggle-icon-wrapper[data-ref]').removeClass('in');
-                                    //     console.log('good');
-                                    // }
-                                    // else
-                                    // {
-                                    //     console.log('bad');
-                                    // }
-                                    // $('.main-menu-overlay').click(function() {
-                                    //       $body.removeClass('menu-mobile-in');
-                                    //       $('#nav-menu-mobile').removeClass('in');
-                                    //       $('.toggle-icon-wrapper[data-ref]').removeClass('in');
-                                    //   });
-                                    // var dest = $(elementClick).offset().top;
+                                    var destination;
+
                                     if( elementClick == '#bl6')
                                     {
                                         dest = $(document).height();
@@ -389,7 +382,7 @@ global $flowers_theme_opt;
                                         console.log('if true');
                                     }
                                     console.log('do'+dest);
-                                    destination = dest + offset_to_target_block;
+                                    destination = dest - offset_to_target_block;
 
                                     jQuery("html:not(:animated),body:not(:animated)").animate({
                                         scrollTop: destination
@@ -475,6 +468,11 @@ global $flowers_theme_opt;
                                 -o-transition-timing-function: cubic-bezier(0.11, 0.76, 0.24, 0.93);
                                 transition-timing-function: cubic-bezier(0.11, 0.76, 0.24, 0.93);
                             }
+
+                            /*mob menu 777*/
+                            .container.header-mobile-wrapper .header-mobile-inner .header-mobile-nav.menu-drop-fly form.aws-search-form input{
+                                background: #383838;
+                                color: white;
                         </style>
 
                         <div class="shopping-cart-wrapper header-customize-item with-price">
@@ -667,13 +665,14 @@ global $flowers_theme_opt;
 
 
 
-                <form role="search" method="get" class="search-popup-inner" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-
-                    <input type="search" id="woocommerce-product-search-field-<?php echo isset( $index ) ? absint( $index ) : 0; ?>" class="search-field" placeholder="<?php echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-                    <button type="submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>"><?php echo esc_html_x( 'Search', 'submit button', 'woocommerce' ); ?></button>
-
-                    <input type="hidden" name="post_type" value="product" />
-                </form>
+<!--                <form role="search" method="get" class="search-popup-inner" action="--><?php //echo esc_url( home_url( '/' ) ); ?><!--">-->
+<!---->
+<!--                    <input type="search" id="woocommerce-product-search-field---><?php //echo isset( $index ) ? absint( $index ) : 0; ?><!--" class="search-field" placeholder="--><?php //echo esc_attr__( 'Search products&hellip;', 'woocommerce' ); ?><!--" value="--><?php //echo get_search_query(); ?><!--" name="s" />-->
+<!--                    <button type="submit" value="--><?php //echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?><!--">--><?php //echo esc_html_x( 'Search', 'submit button', 'woocommerce' ); ?><!--</button>-->
+<!---->
+<!--                    <input type="hidden" name="post_type" value="product" />-->
+<!--                </form>-->
+                <?php echo do_shortcode('[aws_search_form]'); ?>
 
                 <div><button class="action" data-dialog-close="close" type="button"><i class="fas fa-close"></i></button></div>
             </div>
