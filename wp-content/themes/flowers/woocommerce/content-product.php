@@ -120,25 +120,24 @@ if ( empty( $product ) || ! $product->is_visible() ) {
             </div>
 
             <div class="clear"></div>
+             <style>
+                 #my-custom-add-to-cart-button{
+                     display: none;
+                 }
+                 #my-custom-add-to-cart-button:first-child{
+                    display: block;
+                 }
+
+             </style>
             <a data-toggle="tooltip" data-placement="top" title="" class="product-quick-view" data-product_id="1569" <a="" href="<?php the_permalink();?>" data-original-title="Quick view"><i class="fas fa-search"></i></a>
             <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to cart">
 
-            	<a rel="nofollow" href="/handmade/home-02/?add-to-cart=1569" data-quantity="1" data-product_id="1569" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart">
-            		<i class="fas fa-shopping-cart"></i> Add to cart</a>
-            		<?
-            		echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
-										sprintf(
-											'<a href="%s" data-quantity="%s" class="%s" %s>%s</a>',
-											esc_url( $product->add_to_cart_url() ),
-											esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
-											esc_attr( isset( $args['class'] ) ? $args['class'] : '' ),
-											isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
-											esc_html( $product->add_to_cart_text() )
-										),
-										$product,
-										$args
-									);
-            		?>
+                <a rel="nofollow" id="my-custom-add-to-cart-button" href="<?php echo get_bloginfo('template_url');?>/?add-to-cart=<?php echo $product->get_id(); ?>" data-product_id="<?php echo $product->get_id(); ?>" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart my-custom-add-to-cart-button">
+                    <i class="fa fa-shopping-cart"></i> Add to cart</a>
+
+<!--                <a rel="nofollow" href="/handmade/product/knit-from-wool-bracelets/?add-to-cart=1548" data-quantity="1" data-product_id="1548" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart">-->
+<!--                    <i class="fa fa-shopping-cart"></i> Add to cart</a>-->
+
             </div>
          </div>
       </div>

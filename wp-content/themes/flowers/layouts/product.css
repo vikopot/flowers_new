@@ -58,3 +58,16 @@ button.single_add_to_cart_button.button.alt:focus{
     border: #ffffff00 ;
     box-shadow: none !important;
 }
+
+.site-content-single-product .single-product-info .summary-product-wrap{
+    width: 49%;
+}
+
+@media screen and (max-width: 767px){
+    .container .site-content-single-product .single-product-inner{
+        padding: 20px;
+    }
+}
+.product-listing.woocommerce .product-name a:hover{
+    color: #000;
+}

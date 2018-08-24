@@ -11,7 +11,11 @@
 // nocache_headers();
 #get_product_search_form();
 // echo get_post_type( get_the_ID() );
+
 // для ссылок в меню
+//проверка на главной ли мы странице ,тогда #bl6,
+//а если не на главной ,
+//то site.com#bl6
 if( is_front_page() )
 {
     $home_url_link = '';
@@ -50,6 +54,7 @@ global $flowers_theme_opt;
 
     <? #wp_head(); ?>
     <meta charset='utf-8'>
+    <title><?php bloginfo('name'); ?></title>
     <!-- Slider -->
 
 
@@ -82,6 +87,7 @@ global $flowers_theme_opt;
             url(http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular) format('svg');
             font-weight:400;font-style:normal
         }
+
     </style>
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_url');?>/layouts/6b6cf80f85e258f63952c28df862c487.css" data-minify="1" />
     <script src="<?php echo get_bloginfo('template_url');?>/js/1e2d507c5610e2750f2f3a3c173602ca.js" data-minify="1"></script>
@@ -90,8 +96,12 @@ global $flowers_theme_opt;
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="pingback" <a href="http://themes.g5plus.net/handmade/xmlrpc.php" />
     <link rel="shortcut icon" href="http://themes.g5plus.net/handmade/wp-content/themes/handmade/assets/images/favicon.ico" />
-    <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script> <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
-    <title>Home 02 &#8211; HandMade</title>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
     <style>.wishlist_table .add_to_cart,a.add_to_wishlist.button.alt{border-radius:16px;-moz-border-radius:16px;-webkit-border-radius:16px}</style>
     <link rel='dns-prefetch' href='//fonts.googleapis.com' />
     <link rel='dns-prefetch' href='//s.w.org' />
@@ -102,6 +112,11 @@ global $flowers_theme_opt;
     <style type="text/css">img.wp-smiley,img.emoji{display:inline !important;border:none !important;box-shadow:none !important;height:1em !important;width:1em !important;margin:0
         .07em !important;vertical-align:-0.1em !important;background:none !important;padding:0
         !important}
+        @font-face{
+            font-family:WooCommerce;
+            src:url(<?php echo get_bloginfo('template_url');?>/fonts/WooCommerce.ttf);
+
+        }
     </style>
     <style id='rs-plugin-settings-inline-css' type='text/css'>#rs-demo-id{}</style>
     <link rel='stylesheet' id='woocommerce-smallscreen-css' property='stylesheet' href='http://themes.g5plus.net/handmade/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=3.4.2' type='text/css' media='only screen and (max-width: 768px)' />
@@ -164,6 +179,7 @@ global $flowers_theme_opt;
         .x-menu-a-text i{
             color: #b1d1c9;
         }
+        /*основной шрифт*/
         @font-face {
             font-family: 'gothic';
             src: url('<?php echo get_bloginfo('template_url');?>/fonts/g/gothic.eot');
@@ -178,7 +194,7 @@ global $flowers_theme_opt;
     <?php wp_head(); ?>
 
 
-
+    <style>body{font-size: 14px}</style>
 </head>
 <body class="page-template-default page page-id-30 woocommerce-no-js footer-static header-2 woocommerce wpb-js-composer js-comp-ver-5.1.1 vc_responsive" style="font-family: 'gothic'!important;">
 <div id="wrapper">
@@ -209,7 +225,7 @@ global $flowers_theme_opt;
                             <div id="lang_sel">
                                 <ul>
                                     <li>
-                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="HandMade - Shop WordPress WooCommerce Theme" width="30px" style="padding-right: 5px;width: 50px;">
+                                        <img src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Flowers Roses" width="30px" style="padding-right: 5px;width: 50px;">
                                     </li>
                                 </ul>
                             </div>
@@ -247,6 +263,7 @@ global $flowers_theme_opt;
                     </aside>
                     <aside id="g5plus-my-account-2" class="separate-left widget widget-my-account">
 <!--                        <a href="/handmade/my-account/">Вход</a>-->
+<!--                        ссылка на акк вход/ыход-->
                         <?
                         if (is_user_logged_in() )
                         {
@@ -367,6 +384,7 @@ global $flowers_theme_opt;
                             </li>
                         </ul>
                         <script>
+                            //скролл с верхнего меню на блоки на главной странице
                             $(document).ready(function() {
                                 $("a.scrollto_link").click(function() {
                                     var elementClick = $(this).attr("href");
@@ -409,6 +427,7 @@ global $flowers_theme_opt;
                                 <li style="font-size: 22px"><!-- 9:00 - 20:00 --></li>
                             </ul>
                         </div>
+<!--                        ссылки на социальные сети-->
                         <ul class="header-customize-item header-social-profile-wrapper" style="font-size: 22px">
                             <!-- <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li> -->
                             <li><a href="<?=$flowers_theme_opt["header-socials-fb"];?>" target="_blank"><i class="fab fa-facebook" style="color: #999;"></i></a></li>
@@ -470,9 +489,10 @@ global $flowers_theme_opt;
                             }
 
                             /*mob menu 777*/
-                            .container.header-mobile-wrapper .header-mobile-inner .header-mobile-nav.menu-drop-fly form.aws-search-form input{
+                            .container.header-mobile-wrapper .header-mobile-inner .header-mobile-nav.menu-drop-fly form.aws-search-form input {
                                 background: #383838;
                                 color: white;
+                            }
                         </style>
 
                         <div class="shopping-cart-wrapper header-customize-item with-price">
@@ -640,7 +660,7 @@ global $flowers_theme_opt;
                     <div class="header-right">
                         <div class="header-customize header-customize-nav">
                             <div class="search-button-wrapper header-customize-item style-default"> <a class="icon-search-menu" href="#" data-search-type="standard"><i class="wicon fa fa-search"></i></a></div>
-                            <div class="search-button-wrapper header-customize-item style-default"> <a class="icon-search-menu" href="#" data-search-type="standard"><i class="fas fa-shopping-cart" style="color:#000"></i></a></div>
+                            <div class="search-button-wrapper header-customize-item style-default"> <a class="icon-cart-menu" href="<?php echo get_bloginfo('template_url');?>/cart/"><i class="fas fa-shopping-cart" style="color:#000"></i></a></div>
                         </div>
                     </div>
                 </div>

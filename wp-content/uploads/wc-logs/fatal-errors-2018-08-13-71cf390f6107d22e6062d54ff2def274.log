@@ -1,0 +1,16 @@
+2018-08-13T14:37:47+00:00 CRITICAL Call to a member function get_categories() on string
+
+2018-08-13T14:38:50+00:00 CRITICAL Call to a member function get_categories() on string
+
+2018-08-13T14:40:28+00:00 CRITICAL Call to a member function get_categories() on string
+
+2018-08-13T14:43:08+00:00 CRITICAL Call to a member function get_categories() on string
+
+2018-08-13T14:43:09+00:00 CRITICAL Call to a member function get_categories() on string
+
+2018-08-13T14:43:49+00:00 CRITICAL Call to a member function get_category_ids() on string
+
+2018-08-13T14:44:29+00:00 CRITICAL Call to a member function get_category_ids() on string
+
+2018-08-13T14:46:17+00:00 CRITICAL Call to a member function get_category_ids() on string
+

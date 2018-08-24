@@ -8,7 +8,8 @@
  *
  * @package flowers
  */
- 
+
+global $flowers_theme_opt;
 ?>
 <footer class="main-footer-wrapper light">
     <div id="wrapper-footer">
@@ -56,7 +57,7 @@
                                 <aside id="wolverine-footer-logo-2" class="widget widget-footer-logo">
                                     <div class="footer-logo">
                                         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Flowers Roses"><img class="footer-logo-img" src="<?php echo get_bloginfo('template_url');?>/img/king.png" alt="Flowers Roses" style="        width: 80px;"/></a>
-                                        <div class="sub-description"> Доставка цветов по всей Одессе. Любовь и забота о клиенте в каждом букете.</div>
+                                        <div class="sub-description"> <?=$flowers_theme_opt["footer_slug"];?></div>
                                     </div>
                                 </aside>
                             </div>
@@ -96,9 +97,9 @@
                                     <h4 class="widget-title"><span>Контакты</span></h4>
                                     <div class="textwidget">
                                         <ul class="footer-contact-us">
-                                            <li> <i class="fas fa-map-marker p-color"></i> <span> Одесса, Пушкина 89 </span></li>
-                                            <li> <i class="fas fa-envelope p-color"></i> <span> flowers@gmail.com </span></li>
-                                            <li> <i class="fas fa-phone p-color"></i> <span>+ 38(094) 949 68 88</span></li>
+                                            <li> <i class="fas fa-map-marker p-color"></i> <span> <?=$flowers_theme_opt["footer_contacts_siti-steet"];?> </span></li>
+                                            <li> <i class="fas fa-envelope p-color"></i> <span> <?=$flowers_theme_opt["footer_contacts_email"];?></span></li>
+                                            <li> <i class="fas fa-phone p-color"></i> <span><?=$flowers_theme_opt["footer_contacts_phone"];?></span></li>
                                         </ul>
                                     </div>
                                 </aside>
@@ -137,7 +138,7 @@
                         <div class="col-md-6 sidebar text-left">
                             <aside id="text-3" class="copyright margin-top-10 widget widget_text"><!--copyright margin-top-10 widget widget_text-->
                                 <div class="textwidget">
-                                    <div>© Copyright 2018. Love Roses .</div>
+                                    <div><?=$flowers_theme_opt["footer_copyright"];?></div>
                                     <!--                                    <div>Theme Flowers</div>-->
                                 </div>
                             </aside>

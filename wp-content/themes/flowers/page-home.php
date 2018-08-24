@@ -5,6 +5,13 @@ $count_products = 8;
 
 <?php //echo do_shortcode('[aws_search_form]'); ?>
 
+
+
+
+
+
+
+
 <? get_header(); ?>
 
          <div id="wrapper-content" class="clearfix">
@@ -124,7 +131,7 @@ $count_products = 8;
 
    @media(max-width:768px){
        .carousel-caption{
-           bottom: 30px;
+           bottom: 40px;
        }
    }
    @media(min-width:768px){
@@ -176,9 +183,9 @@ $count_products = 8;
               <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
           </div>
      </article> <!-- carousel-caption .// -->
-      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
-         <button type="button" class="btn slider_btn" style="    margin: 5px;">Подробнее</button>
-      </article>
+<!--      <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">-->
+<!--         <button type="button" class="btn slider_btn" style="    margin: 5px;">Подробнее</button>-->
+<!--      </article>-->
     </div>
 <!--      <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">-->
 <!--          <div class="carousel-caption d-none d-md-block">-->
@@ -196,9 +203,9 @@ $count_products = 8;
               <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
           </div>
      </article> <!-- carousel-caption .// -->
-     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
-         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
-      </article>
+<!--     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">-->
+<!--         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>-->
+<!--      </article>-->
     </div>
     <div class="carousel-item" style="background-image: url(<?=get_bloginfo('template_url');?>/img/slide2.JPG)">
 <!--      <img class="d-block w-100" src="--><?php //echo get_bloginfo('template_url');?><!--/img/slide2.JPG" alt="Third slide">-->
@@ -210,9 +217,9 @@ $count_products = 8;
               <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
           </div>
      </article> <!-- carousel-caption .// -->
-     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">
-         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>
-      </article>
+<!--     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">-->
+<!--         <button type="button" class="btn  slider_btn" style="    margin: 5px;">Купить</button>-->
+<!--      </article>-->
     </div>
   </div>
   <a class="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">

@@ -323,7 +323,7 @@ add_filter( 'woocommerce_add_to_cart_fragments', function($fragments) {
 add_filter('woocommerce_sale_flash', 'woocommerce_custom_sale_text', 10, 3);
 function woocommerce_custom_sale_text($text, $post, $_product)
 {
-    return '<span class="onsale">PUT YOUR TEXT</span>';
+    return '<span></span>';
 }
 
 /*get current template*/
@@ -383,3 +383,79 @@ function iconic_remove_password_strength() {
     wp_dequeue_script( 'wc-password-strength-meter' );
 }
 add_action( 'wp_print_scripts', 'iconic_remove_password_strength', 10 );
+
+
+
+//<?php
+//ADD TO CART FUNCTION
+add_action('wp_footer', 'my_custom_wc_button_script');
+function my_custom_wc_button_script() {
+    ?>
+    <script>
+        jQuery(document).ready(function($) {
+            var ajaxurl = "<?php echo esc_attr( admin_url( 'admin-ajax.php' ) ); ?>";
+            $( document.body).on('click', '.my-custom-add-to-cart-button', function(e) {
+                e.preventDefault();
+                var $this = $(this);
+                if( $this.is(':disabled') ) {
+                    return;
+                }
+                var id = $(this).data("product-id");
+                var data = {
+                    action     : 'my_custom_add_to_cart',
+                    product_id : id
+                };
+                $.post(ajaxurl, data, function(response) {
+                    if( response.success ) {
+                        $this.text("added to cart");
+                        $this.attr('disabled', 'disabled');
+                        $( document.body ).trigger( 'wc_fragment_refresh' );
+                    }
+                }, 'json');
+            })
+        });
+    </script>
+    <?php
+}
+add_action('wp_ajax_my_custom_add_to_cart', "my_custom_add_to_cart");
+add_action('wp_ajax_nopriv_my_custom_add_to_cart', "my_custom_add_to_cart");
+function my_custom_add_to_cart() {
+    $retval = array(
+        'success' => false,
+        'message' => ""
+    );
+    if( !function_exists( "WC" ) ) {
+        $retval['message'] = "woocommerce not installed";
+    } elseif( empty( $_POST['product_id'] ) ) {
+        $retval['message'] = "no product id provided";
+    } else {
+        $product_id = $_POST['product_id'];
+        if( my_custom_cart_contains( $product_id ) ) {
+            $retval['message'] = "product already in cart";
+        } else {
+            $cart = WC()->cart;
+            $retval['success'] = $cart->add_to_cart( $product_id );
+            if( !$retval['success'] ) {
+                $retval['message'] = "product could not be added to cart";
+            } else {
+                $retval['message'] = "product added to cart";
+            }
+        }
+    }
+    echo json_encode( $retval );
+    wp_die();
+}
+function my_custom_cart_contains( $product_id ) {
+    $cart = WC()->cart;
+    $cart_items = $cart->get_cart();
+    if( $cart_items ) {
+        foreach( $cart_items as $item ) {
+            $product = $item['data'];
+            if( $product_id == $product->id ) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+?>

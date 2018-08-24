@@ -1,0 +1,12 @@
+2018-08-11T11:50:19+00:00 CRITICAL Allowed memory size of 67108864 bytes exhausted (tried to allocate 264153 bytes)
+
+2018-08-11T14:08:26+00:00 CRITICAL Call to undefined method WC_Product_Simple::regular_price()
+
+2018-08-11T14:08:37+00:00 CRITICAL Call to undefined method WC_Product_Simple::regular_price()
+
+2018-08-11T14:53:18+00:00 CRITICAL Allowed memory size of 67108864 bytes exhausted (tried to allocate 264153 bytes)
+
+2018-08-11T17:45:29+00:00 CRITICAL Call to undefined function int()
+
+2018-08-11T19:13:33+00:00 CRITICAL Call to undefined function flowers_post_thumbnail()
+

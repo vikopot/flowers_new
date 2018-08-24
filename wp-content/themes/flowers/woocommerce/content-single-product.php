@@ -18,6 +18,13 @@
 
 global $product;
 
+//if( woocommerce_template_single_add_to_cart() ){
+//    $wc_single_add_to_cart = woocommerce_template_single_add_to_cart();
+//}
+//else{
+//
+//}
+//
 
 
 //
@@ -227,7 +234,8 @@ global $product;
                               <a title="Compare" href="http://themes.g5plus.net/handmade/product/knit-from-wool-bracelets/?action=yith-woocompare-add-product&amp;id=1559" class="compare" data-product_id="1559"><i class="fa fa-exchange"></i> Compare</a>
                            </div> -->
                            <div class="product_meta">
-                              <span class="product-stock-status-wrapper"><label>Состояние:</label> <span class="product_stock"><span class="product-stock-status in-stock">В наличии</span></span> </span>
+                               <? #var_dump($product); ?>
+                              <span class="product-stock-status-wrapper"><label>Состояние:</label> <span class="product_stock"><span class="product-stock-status in-stock"><? if($product->stock_status == "instock" ){echo "В наличии";}else{echo "Нет в наличии";} ?></span></span> </span>
                               <!-- <span><label>Size:</label><span class="product_dimensions"> N/A</span></span> -->
                             <!--   <span class="posted_in"><label>Категории:</label> <a href="http://themes.g5plus.net/handmade/product-category/birthday-gifts/" rel="tag">Birthday Gifts</a>, <a href="http://themes.g5plus.net/handmade/product-category/jewelry/" rel="tag">Jewelry</a>, <a href="http://themes.g5plus.net/handmade/product-category/personal/" rel="tag">Personal</a>, <a href="http://themes.g5plus.net/handmade/product-category/special-goods/" rel="tag">Special Goods</a>.</span> -->
                               <!-- <span class="tagged_as"><label>Теги:</label> <a href="http://themes.g5plus.net/handmade/product-tag/birthday/" rel="tag">Birthday</a>, <a href="http://themes.g5plus.net/handmade/product-tag/jewelry/" rel="tag">Jewelry</a>, <a href="http://themes.g5plus.net/handmade/product-tag/person/" rel="tag">Person</a>.</span> -->
