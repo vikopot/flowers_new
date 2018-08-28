@@ -71,3 +71,15 @@ button.single_add_to_cart_button.button.alt:focus{
 .product-listing.woocommerce .product-name a:hover{
     color: #000;
 }
+
+.woocommerce div.product form.cart div.quantity .quantity-inner .qty, .product-quantity div.quantity .quantity-inner .qty{
+    border: none;
+    background-color: #fff;
+}
+
+.variations_form table.variations td.label{
+    min-width: 52px;
+}
+.woocommerce div.product form.cart .variations select{
+    min-width: 38%;
+}

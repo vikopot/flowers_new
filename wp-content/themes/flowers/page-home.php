@@ -200,7 +200,7 @@ $count_products = 8;
                <h5>Third slide label</h5>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt</p>
-              <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+              <button type="button" class="btn slider_btn" style="    margin: 5px;" onclick="window.location.href='http://www.kolopar.xyz/product/зефир-и-цветы/'">Купить</button>
           </div>
      </article> <!-- carousel-caption .// -->
 <!--     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">-->
@@ -214,7 +214,8 @@ $count_products = 8;
                <h5>Third slide label</h5>
                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt</p>
-              <button type="button" class="btn slider_btn" style="    margin: 5px;">Купить</button>
+              <button type="button" class="btn slider_btn" style="    margin: 5px;" onclick="window.location.href='http://www.kolopar.xyz/product/%d0%b8%d0%b3%d1%80%d1%83%d1%88%d0%ba%d0%b0-%d0%bc%d0%b5%d0%b4%d0%b2%d0%b5%d0%b4%d1%8c/'">Купить</button>
+
           </div>
      </article> <!-- carousel-caption .// -->
 <!--     <article class="carousel-caption hidden-md-up" style="display: flex;justify-content: center;background: none;">-->
@@ -222,14 +223,14 @@ $count_products = 8;
 <!--      </article>-->
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel1_indicator" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<!--  <a class="carousel-control-prev" href="#carousel1_indicator" role="button" data-slide="prev">-->
+<!--    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--    <span class="sr-only">Previous</span>-->
+<!--  </a>-->
+<!--  <a class="carousel-control-next" href="#carousel1_indicator" role="button" data-slide="next">-->
+<!--    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--    <span class="sr-only">Next</span>-->
+<!--  </a>-->
 </div>
 <!--              <script src="https://blackrockdigital.github.io/startbootstrap-full-slider/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 
@@ -272,10 +273,10 @@ $count_products = 8;
 
                                              <ul class="product-categories-home row">
                                                 <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>shop/" title="Every Day">Все товары</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b/" title="Uncategorized">Цветы</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d0%b4%d0%b5%d1%81%d0%b5%d1%80%d1%82%d1%8b/" title="Special Goods">Десерты</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d0%b8%d0%b3%d1%80%d1%83%d1%88%d0%ba%d0%b8/" title="Romantic">Игрушки</a></li>
-                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d1%88%d0%b0%d1%80%d1%8b/" title="Personal">Шары</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d1%86%d0%b2%d0%b5%d1%82%d1%8b/">Цветы</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d0%b4%d0%b5%d1%81%d0%b5%d1%80%d1%82%d1%8b/">Десерты</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d0%b8%d0%b3%d1%80%d1%83%d1%88%d0%ba%d0%b8/">Игрушки</a></li>
+                                                <li class="col-lg col-md col-sm"><a href="<?=esc_url( home_url( '/' ) );?>product-category/%d1%88%d0%b0%d1%80%d1%8b/">Шары</a></li>
                                              </ul>
                                              
                                           </div>
@@ -320,7 +321,7 @@ $count_products = 8;
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Подарок на любой вкус</a></h3>
+                                                         <h3>Подарок на любой вкус</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наше главное направление - флористика, но мы можем предложить Вам всевозможные варианты подарка!</p>
                                                       </div>
@@ -338,7 +339,7 @@ $count_products = 8;
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Доставка</a></h3>
+                                                         <h3>Доставка</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наши курьеры преднесут подарок именно так. как этого хотиты Вы.</p>
                                                       </div>
@@ -357,7 +358,7 @@ $count_products = 8;
                                                          </div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Авторский подарок</a></h3>
+                                                         <h3>Авторский подарок</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Вы можете сами выбрать каждую деталь Вашего подарка!</p>
                                                       </div>
@@ -368,7 +369,7 @@ $count_products = 8;
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Оплата</a></h3>
+                                                         <h3>Оплата</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>мы позаботились о том, чтобы у Вас не возникло проблем с оплатой подарка! Оплата курьером или картой*</p>
                                                       </div>
@@ -379,7 +380,7 @@ $count_products = 8;
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Свежие десерты</a></h3>
+                                                         <h3>Свежие десерты</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Мы не храним готовые десерты, а готовим их индивидуально для Вас!</p>
                                                       </div>
@@ -390,7 +391,7 @@ $count_products = 8;
                                                          <div class="handmade-post-image-overlay"> <!-- <a class="handmade-post-readmore" <a href="/handmade/here-are-many-variations-of-passages/" title="Here Are Many Variations Of Passages">READ MORE </a> --></div>
                                                       </div>
                                                       <div class="handmade-post-content">
-                                                         <h3><a href="#" rel="bookmark" title="Image Post Example">Опытные кондитеры</a></h3>
+                                                         <h3>Опытные кондитеры</h3>
                                                          <div class="post-entry-meta p-color"> <span class="handmade-post-date"><!-- June 1, 2015 --></span> | <span class="handmade-post-author"><a href="/handmade/author/admin/"><!-- admin --></a></span></div>
                                                          <p>Наши кондитеры готовят вкусные десерты, при этом делая их в соответствии с нормами полезного питания!</p>
                                                       </div>
@@ -473,19 +474,28 @@ $count_products = 8;
                                                                                    <div class="product-thumb-primary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail wp-post-image" alt="" srcset="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 600w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 150w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 300w, <?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?> 180w" sizes="(max-width: 300px) 100vw, 300px" /></div>
                                                                                    <div class="product-thumb-secondary"> <img width="300" height="300" src="<?=get_the_post_thumbnail_url( $products_toys[$o]->id, 'full' );?>" class="attachment-shop_catalog size-shop_catalog" alt="" /></div>
                                                                                    <a class="product-link" <a href="<?=get_permalink( $products_toys[$o]->id );?>"></a>
-<!--                                                                                   <div class="product-actions">-->
-<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>-->
-<!--                                                                                       <div class="yith-wcwl-add-to-wishlist add-to-wishlist-2239">-->
-<!--                                                                                           <div class="yith-wcwl-add-button show" style="display:block"> <a href="/handmade/home-02/?add_to_wishlist=2239" rel="nofollow" data-product-id="2239" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a> <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" /></div>-->
-<!--                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;"> <span class="feedback">Product added!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
-<!--                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none"> <span class="feedback">The product is already in the wishlist!</span> <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a></div>-->
-<!--                                                                                           <div style="clear:both"></div>-->
-<!--                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>-->
-<!--                                                                                       </div>-->
-<!--                                                                                       <div class="clear"></div>-->
-<!--                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="--><?//=$products_toys[$o]->id?><!--" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--"><i class="fas fa-search"></i></a>-->
-<!--                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="--><?//=get_permalink( $products_toys[$o]->id );?><!--" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>-->
-<!--                                                                                   </div>-->
+                                                                                   <div class="product-actions">
+                                                                                       <a data-toggle="tooltip" data-placement="top" title="Compare" <a href="/handmade/product/birthday-gifts-products/?action=yith-woocompare-add-product&amp;id=2239" class="compare" data-product_id="2239"><i class="fas fa-exchange-alt"></i> </a>
+                                                                                       <div class="yith-wcwl-add-to-wishlist">
+                                                                                           <div class="yith-wcwl-add-button show" style="display:block">
+                                                                                               <a href="" rel="nofollow" data-product-id="" data-product-type="grouped" class="add_to_wishlist"> Add to Wishlist</a>
+                                                                                               <img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden" />
+                                                                                           </div>
+                                                                                           <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;">
+                                                                                               <span class="feedback">Product added!</span>
+                                                                                               <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a>
+                                                                                           </div>
+                                                                                           <div class="yith-wcwl-wishlistexistsbrowse hide" style="display:none">
+                                                                                               <span class="feedback">The product is already in the wishlist!</span>
+                                                                                               <a href="/handmade/wishlist/" rel="nofollow"> Browse Wishlist </a>
+                                                                                           </div>
+                                                                                           <div style="clear:both"></div>
+                                                                                           <div class="yith-wcwl-wishlistaddresponse"></div>
+                                                                                       </div>
+                                                                                       <div class="clear"></div>
+                                                                                       <a data-toggle="tooltip" data-placement="top" title="Quick view" class="product-quick-view" data-product_id="<?=$products_toys[$o]->id?>" <a href="<?=get_permalink( $products_toys[$o]->id );?>"><i class="fas fa-search"></i></a>
+                                                                                       <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="View products"><a rel="nofollow" <a href="<?=get_permalink( $products_toys[$o]->id );?>" data-quantity="1" data-product_id="2239" data-product_sku="" class="button product_type_grouped btn_add_to_cart"><i class="fas fa-shopping-cart"></i> View products</a></div>
+                                                                                   </div>
                                                                                </div>
                                                                                <div class="product-info">
                                                                                    <h3 class="product-name p-font"><a href="<?=get_permalink( $products_toys[$o]->id );?>"><?=$products_toys[$o]->name;?></a></h3>
@@ -1623,7 +1633,7 @@ $count_products = 8;
                                                 <div class="bg-img" style="height:269px; height:269px; background-image:url('http://kolopar.xyz/wp-content/themes/flowers/img/rose_4.jpg'); background-size:100%"></div>
                                              </div>
                                              <div class="overlay-banner">
-                                                <a class="link-banner" title="" target="_self" href="#">
+                                                <a class="link-banner" title="" target="_self" href="/my-account/">
                                                    <div class="content-middle">
                                                       <div class="content-middle-inner">
                                                          <h2>Получи - 10%</h2>

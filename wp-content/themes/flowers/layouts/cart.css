@@ -25,3 +25,38 @@ div.cupon{
 .cart-discount.coupon-first-order-discount a.woocommerce-remove-coupon{
 	color: #7a7a7a;
 }
+
+.woocommerce table.shop_table.cart td.actions .button,
+.woocommerce button.button:disabled, .woocommerce button.button:disabled[disabled]{
+	color: #fff !important;
+	padding: 12px 25px;
+}
+.cart-subtotal { display: none !important; }
+
+.cart_totals.calculated_shipping wc-proceed-to-checkout{
+	text-align: right;
+}
+
+.order-total td[data-title="Итого"]{
+	text-align: right;
+}
+
+article.container{
+	margin-bottom: 20px;
+}
+
+.wc-proceed-to-checkout{
+	text-align: right;
+}
+.quantity .quantity-inner input.input-text.qty{
+	border: none;
+	background: #fff;
+}
+
+span.woocommerce-Price-amount span.woocommerce-Price-currencySymbol{
+	padding-left: 5px;
+}
+
+.woocommerce .woocommerce-message[role="alert"] a.button{
+	display: none;
+}

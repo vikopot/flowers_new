@@ -1,0 +1,129 @@
+.alg-wc-wl-view-table.shop_table{
+    display: none;
+}
+.wpcf7{
+    width: 100%;
+}
+.title_page{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.title_page h1{
+    margin: 0px 10px;
+}
+.title_page .change-acc_link{
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav_buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.nav_buttons_item{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+}
+.button nav_buttons_item_link{}
+
+.change-acc_link{
+    padding: 0px 5px;
+
+}
+.change-acc_link p{
+    color: #811a15;
+}
+.commit-content_title{
+    width: 100%;
+}
+.commit-content{
+    padding: 10px;
+    margin: 12px 0px;
+    /*width: 100%;*/
+    font-size: 16px;
+    resize: none;
+    height: 215px;
+}
+.commit-content_btn{
+    min-width: 170px;
+    font-family: gothic;
+}
+div.wpcf7-mail-sent-ok{
+    border: 2px solid #fce2e5;
+}
+
+.owl-item .item{
+    text-align: center;
+}
+.owl-item .item .product-thumbnail {
+    height: 130px;
+}
+
+.owl-wrapper-outer {
+    padding: 35px 0px;
+}
+
+/*bad*/
+/*.owl-item .item:hover{*/
+    /*border: 1px solid #fce2e5;*/
+/*}*/
+
+/*обводка через outline*/
+.owl-item:hover {
+    outline: 1px solid #fce2e5;
+    outline-offset: -4px;
+}
+
+.owl-item .item .product-name a{
+    color: #000;
+}
+.owl-item .item .product-name a:hover{
+    color: #000;
+}
+.alg-wc-wl-empty-wishlist{
+    text-align: center;
+}
+.commit-content_textarea{
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    background: #fce2e5;
+    min-height: 250px;
+}
+.commit-content_btn{
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    font-size: 15px !important;
+    padding: 12px 25px !important;
+    line-height: 1.2!important;
+}
+
+.my-account_content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.row.container_btn_commit_send div{
+    justify-content: center;
+    display: flex;
+}
+
+.owl-carousel.owl-theme{
+    min-height: 272px;
+}
+
+@media screen and (min-width: 1200px){
+    .owl-carousel.owl-theme {
+        min-height: 277px;
+    }
+}
+
+
+.page-id-30 .wpcf7-form p:first-child{margin-bottom:0 !important;}

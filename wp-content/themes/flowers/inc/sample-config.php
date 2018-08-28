@@ -391,6 +391,42 @@ Redux::setSection( $opt_name, array(
         ),
     )
 ) );
+
+
+//Redux::setSection( $opt_name, array(
+//    'title'            => __( 'Отзывы', 'redux-framework-demo' ),
+//    'id'               => 'comments',
+//    'subsection'       => true,
+//    'customizer_width' => '450px',
+////    'desc'             => __( 'For full documentation on this field, visit: ', 'redux-framework-demo' ) . '<a href="//docs.reduxframework.com/core/fields/checkbox/" target="_blank">docs.reduxframework.com/core/fields/checkbox/</a>',
+//    'fields'           => array(
+//
+//        array(
+//            'id'       => 'comment_user',
+//            'type'     => 'text',
+//            'title'    => __( 'Отзыв', 'redux-framework-demo' ),
+//            'subtitle' => __( 'Отзыв', 'redux-framework-demo' ),
+//            'desc'     => __( 'Отзыв', 'redux-framework-demo' ),
+//            'default'  => '',
+//        ),
+//        array(
+//            'id'       => 'comment_user',
+//            'type'     => 'text',
+//            'title'    => __( 'Отзыв', 'redux-framework-demo' ),
+//            'subtitle' => __( 'Отзыв', 'redux-framework-demo' ),
+//            'desc'     => __( 'Отзыв', 'redux-framework-demo' ),
+//            'default'  => '',
+//        ),
+//        array(
+//            'id'       => 'comment_user',
+//            'type'     => 'text',
+//            'title'    => __( 'Отзыв', 'redux-framework-demo' ),
+//            'subtitle' => __( 'Отзыв', 'redux-framework-demo' ),
+//            'desc'     => __( 'Отзыв', 'redux-framework-demo' ),
+//            'default'  => '',
+//        ),
+//) )
+
 //
 //
 //

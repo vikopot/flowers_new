@@ -150,7 +150,7 @@ global $flowers_theme_opt;
     <!-- <link rel="stylesheet" type="text/css" media="all" href="http://themes.g5plus.net/handmade/?custom-page=header-custom-css&amp;current_page_id=30" /> -->
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_bloginfo('template_url');?>/layouts/header-custom-css.css" />
 
-    <style type="text/css" title="dynamic-css" class="options-output">body{background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center center}.page-title-margin{margin-top:25px;margin-bottom:55px}.archive-title-margin{margin-top:25px;margin-bottom:55px}.single-blog-title-margin{margin-top:25px;margin-bottom:55px}body{font-family:"Varela Round";font-weight:400;font-style:normal;font-size:14px}h1{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:36px}h2{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:28px}h3{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:24px}h4{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:21px}h5{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:18px}h6{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:14px}{font-family:"Varela Round"}{font-family:"Playfair Display"}.page-title-inner h1{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:normal;color:#333;font-size:35px}.page-title-inner .page-sub-title{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:italic;color:#333;font-size:14px}.archive-product-title-margin{margin-top:25px;margin-bottom:55px}.single-product-title-margin{margin-top:25px;margin-bottom:55px}.portfolio-title-margin{margin-top:25px;margin-bottom:55px}
+    <style type="text/css" title="dynamic-css" class="options-output">body{background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:center center}.page-title-margin{margin-top:25px;margin-bottom:55px}.archive-title-margin{margin-top:25px;margin-bottom:55px}.single-blog-title-margin{margin-top:25px;margin-bottom:55px}body{font-family:"Varela Round";font-weight:400;font-style:normal;font-size:14px}h1{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:36px}h2{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:28px}h3{/*font-family:"Playfair Display";*/font-weight:400;font-style:normal;font-size:24px}h4{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:21px}h5{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:18px}h6{font-family:"Playfair Display";font-weight:400;font-style:normal;font-size:14px}{font-family:"Varela Round"}{font-family:"Playfair Display"}.page-title-inner h1{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:normal;color:#333;font-size:35px}.page-title-inner .page-sub-title{font-family:"Playfair Display";text-transform:none;font-weight:400;font-style:italic;color:#333;font-size:14px}.archive-product-title-margin{margin-top:25px;margin-bottom:55px}.single-product-title-margin{margin-top:25px;margin-bottom:55px}.portfolio-title-margin{margin-top:25px;margin-bottom:55px}
     </style>
     <style type="text/css" data-type="vc_shortcodes-custom-css">
         .vc_custom_1443867642165{margin-top:25px !important;margin-bottom:20px !important}
@@ -194,9 +194,33 @@ global $flowers_theme_opt;
     <?php wp_head(); ?>
 
 
-    <style>body{font-size: 14px}</style>
+    <style>body{font-size: 14px}a:hover{text-decoration: none !important;}</style>
 </head>
 <body class="page-template-default page page-id-30 woocommerce-no-js footer-static header-2 woocommerce wpb-js-composer js-comp-ver-5.1.1 vc_responsive" style="font-family: 'gothic'!important;">
+	
+
+	
+	<?php if ( ! is_user_logged_in()) { ?>
+	<div class="modal" id="basicModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Скидка</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3>Зарегистрируйтесь и получите скидку 10% на Ваш заказ!</h3>
+      </div>
+      <div class="modal-footer">
+        <a id="modal-link-register" href="/my-account" class="btn btn-primary">Получить скидку</a>
+      </div>
+    </div>
+  </div>
+</div>
+	<?php } ?>
+	
 <div id="wrapper">
     <div class="top-bar mobile-top-bar-hide">
         <div class="container">
@@ -267,13 +291,15 @@ global $flowers_theme_opt;
                         <?
                         if (is_user_logged_in() )
                         {
-                            echo '<a href="'. wp_logout_url( get_permalink( woocommerce_get_page_id( 'myaccount' ) ) ) .'">Выход</a>';
+                            echo '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">Мой Аккаунт</a>';
                         }
                         elseif (!is_user_logged_in() )
                         {
                             echo '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">Вход</a>';
                         }
                         ?>
+<!--                        <a href="/my-account/"><i class="fas fa-user-alt"></i></a>-->
+
                     </aside>
 
                 </div>
@@ -492,6 +518,12 @@ global $flowers_theme_opt;
                             .container.header-mobile-wrapper .header-mobile-inner .header-mobile-nav.menu-drop-fly form.aws-search-form input {
                                 background: #383838;
                                 color: white;
+                            }
+                            .shopping-cart-wrapper.with-price .widget_shopping_cart_content .widget_shopping_cart_icon > i.wicon.fa-shopping-cart{
+                                color: #000;
+                            }
+                            .shopping-cart-wrapper .widget_shopping_cart_content .cart_list_wrapper li .cart-right>a:hover{
+                                color: #000;
                             }
                         </style>
 

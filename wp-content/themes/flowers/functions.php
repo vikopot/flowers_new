@@ -228,6 +228,14 @@ function my_enqueue_stuff() {
     {
         wp_deregister_style('flowers-bootstrap');
     }
+    //гость
+    if( is_page('8') && !is_user_logged_in() ){
+    	  wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/my_account.css');
+    }
+    //юзер
+    if( is_page('8') && is_user_logged_in() ){
+        wp_enqueue_style( 'flowers-checkout', get_template_directory_uri() . '/layouts/my_account_logged.css');
+    }
 
 
     //    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -458,4 +466,13 @@ function my_custom_cart_contains( $product_id ) {
     }
     return false;
 }
+
+
+// disable the magnification zoom in product images
+//убирем зум(увеличение при наведении на картинку товара(на странице товара))
+add_action( 'template_redirect', function() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+//    remove_theme_support( 'wc-product-gallery-lightbox' );
+//    remove_theme_support( 'wc-product-gallery-slider' );
+}, 100 );
 ?>

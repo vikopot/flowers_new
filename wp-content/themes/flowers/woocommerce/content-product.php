@@ -84,9 +84,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 //				}
 
 				?>
-         	
 
-         	
+
+
          </div>
 
          <div class="product-thumb-primary">
@@ -98,13 +98,29 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
          <a class="product-link" <a="" href="<?php the_permalink();?>"></a>
          <div class="product-actions">
-             <a data-toggle="tooltip" data-placement="top" title="" <a="" href="/handmade/product/yellow-pillow/?action=yith-woocompare-add-product&amp;id=1569" class="compare" data-product_id="1569" data-original-title="Compare">
+             <!--<a data-toggle="tooltip" data-placement="top" title="" <a="" href="/handmade/product/yellow-pillow/?action=yith-woocompare-add-product&amp;id=1569" class="compare" data-product_id="1569" data-original-title="Compare">
             	<i class="fas fa-exchange-alt"></i>
-            </a>
+            </a>-->
 
             <div class="yith-wcwl-add-to-wishlist add-to-wishlist-1569">
                <div class="yith-wcwl-add-button show" style="display:block" data-original-title="" title="">
-               	<a href="/handmade/home-02/?add_to_wishlist=1569" rel="nofollow" data-product-id="1569" data-product-type="simple" class="add_to_wishlist"> Add to Wishlist</a>
+
+<div>
+	<div data-item_id="<?php echo $product->get_id(); ?>" data-action="alg-wc-wl-toggle" class="alg-wc-wl-btn add alg-wc-wl-thumb-btn alg-wc-wl-thumb-btn-abs alg-wc-wl-thumb-btn-single positioned-on-parent" style="left: 17px; top: 17px; right: auto; bottom: auto; display: block;">
+   <div class="alg-wc-wl-view-state alg-wc-wl-view-state-add">
+   <i class="fa fa-heart" aria-hidden="true"></i>
+   </div>
+   <div class="alg-wc-wl-view-state alg-wc-wl-view-state-remove">
+   <i class="fa fa-heart" aria-hidden="true"></i>
+   </div>
+   <i class="loading fa fa-refresh fa-spin fa-fw"></i>
+   </div>
+</div>
+
+
+			   <!--	<a href="#/handmade/home-02/?add_to_wishlist=1569" rel="nofollow" data-product-id="1569" data-product-type="simple" class="add_to_wishlist">Add to Wishlist</a>-->
+
+
                	<img src="http://themes.g5plus.net/handmade/wp-content/plugins/yith-woocommerce-wishlist/assets/images/wpspin_light.gif" class="ajax-loading" alt="loading" width="16" height="16" style="visibility:hidden">
                </div>
                <div class="yith-wcwl-wishlistaddedbrowse hide" style="display:none;" data-original-title="" title="">
@@ -129,7 +145,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
                  }
 
              </style>
-            <a data-toggle="tooltip" data-placement="top" title="" class="product-quick-view" data-product_id="1569" <a="" href="<?php the_permalink();?>" data-original-title="Quick view"><i class="fas fa-search"></i></a>
+            <!--<a data-toggle="tooltip" data-placement="top" title="" class="product-quick-view" data-product_id="1569" <a="" href="<?php the_permalink();?>" data-original-title="Quick view"><i class="fas fa-search"></i></a>-->
             <div class="add-to-cart-wrap" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add to cart">
 
                 <a rel="nofollow" id="my-custom-add-to-cart-button" href="<?php echo get_bloginfo('template_url');?>/?add-to-cart=<?php echo $product->get_id(); ?>" data-product_id="<?php echo $product->get_id(); ?>" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart btn_add_to_cart my-custom-add-to-cart-button">

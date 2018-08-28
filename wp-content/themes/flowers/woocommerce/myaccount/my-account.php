@@ -46,78 +46,7 @@ $name = $current_user->user_login;
 ?>
 <!--111-->
 <style>
-    .alg-wc-wl-view-table.shop_table{
-        display: none;
-    }
-    .wpcf7{
-        width: 100%;
-    }
-    .title_page{
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-    .title_page h1{
-        margin: 0px 10px;
-    }
-    .title_page .change-acc_link{
-        display: flex;
-        align-items: flex-end;
-    }
 
-    .nav_buttons{
-        display: flex;
-        justify-content: space-between;
-    }
-    .nav_buttons_item{
-        margin: 10px 0px;
-        display: flex;
-        justify-content: center;
-    }
-    .button nav_buttons_item_link{}
-
-    .change-acc_link{
-        padding: 0px 5px;
-
-    }
-    .change-acc_link p{
-        color: #811a15;
-    }
-    .commit-content_title{
-        width: 100%;
-    }
-   .commit-content{
-       padding: 10px;
-       margin: 12px 0px;
-       /*width: 100%;*/
-       font-size: 16px;
-       resize: none;
-       height: 215px;
-   }
-   .commit-content_btn{
-
-   }
-    div.wpcf7-mail-sent-ok{
-        border: 2px solid #fce2e5;
-    }
-
-    .owl-item .item{
-        text-align: center;
-    }
-    .owl-item .item .product-thumbnail {
-        height: 130px;
-    }
-
-    .owl-item .item:hover{
-        border: 1px solid #fce2e5;
-    }
-    .owl-item .item .product-name a{
-        color: #000;
-    }
-    .owl-item .item .product-name a:hover{
-        color: #000;
-    }
 </style>
 <div class="container">
     <div class="row title_page">
@@ -142,7 +71,7 @@ $name = $current_user->user_login;
 <script>
     // $('div.tumble').toggleClass('bounce');
 </script>
-<div class="container">
+<div class="container my-account_content">
     <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
             <div class="row col-12">

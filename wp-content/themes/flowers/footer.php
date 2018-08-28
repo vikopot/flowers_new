@@ -148,9 +148,9 @@ global $flowers_theme_opt;
                                 <ul class="payment-gate" id="bl6">
                                     <li> <a target="_blank" href="http://www.mastercard.com" title="Master card"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/master_card.jpg" alt="Master card" /> </a></li>
                                     <li> <a target="_blank" href="http://www.visa.com" title="Visa"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/visa.jpg" alt="Visa" /> </a></li>
-                                    <li> <a target="_blank" href="http://www.paypal.com" title="Paypal"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/paypal.jpg" alt="Paypal" /> </a></li>
-                                    <li> <a target="_blank" href="https://www.americanexpress.com/" title="American Express"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/american_express.jpg" alt="American Express" /> </a></li>
-                                    <li> <a target="_blank" href="https://www.westernunion.com" title="Weston Union"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/weston_union.jpg" alt="Weston Union" /> </a></li>
+                                    <li> <a target="_blank" href="https://www.privat24.ua" title="Paypal"> <img src="https://pbs.twimg.com/profile_images/957912926127579136/Vchzj67S.jpg" alt="privat24" height="28px" style="height: 28px;width: auto;"/> </a></li>
+<!--                                    <li> <a target="_blank" href="https://www.americanexpress.com/" title="American Express"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/american_express.jpg" alt="American Express" /> </a></li>-->
+<!--                                    <li> <a target="_blank" href="https://www.westernunion.com" title="Weston Union"> <img src="http://themes.g5plus.net/handmade/wp-content/uploads/2015/10/weston_union.jpg" alt="Weston Union" /> </a></li>-->
                                 </ul>
                             </aside>
                         </div>
@@ -289,5 +289,23 @@ var yith_woocompare = {"ajaxurl":"\/handmade\/?wc-ajax=%%endpoint%%","actionadd"
 <!--    });-->
 <!--</script>-->
 <?php wp_footer(); ?>
+
+
+<?php if ( ! is_user_logged_in()) { ?>
+<script>
+$(document).ready(function(){
+	var url = null;
+	$('.button.checkout').click(function(e) {
+		e.preventDefault();
+		url = $(this).attr('href');
+		$('#basicModal').modal('show');
+	});
+	
+	$('#basicModal').on('hidden.bs.modal', function (e) {
+		window.location.replace(url);
+	});
+});
+</script>
+<?php } ?>
 </body>
 </html>
